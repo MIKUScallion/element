@@ -265,7 +265,7 @@ export default {
 ```html
 <el-input
   type="textarea"
-  :rows="2"
+  :rows="5"
   placeholder="请输入内容"
   v-model="textarea">
 </el-input>

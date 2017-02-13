@@ -1,0 +1,15 @@
+{
+  "name": "theme-test",
+  "version": "0.0.1",
+  "main": "lib/index.css",
+  "scripts": {
+    "et:init": "et -i src/variables.css",
+    "et:dev": "et -c src/variables.css -o lib/ -w",
+    "et:build": "et -c src/variables.css -o lib/"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "element-theme": "^0.7.0",
+    "element-theme-default": "^1.1.6"
+  }
+}

@@ -215,10 +215,18 @@
             {
               "path": "/collapse",
               "title": "Collapse 折叠面板"
+            },
+            {
+              "path": "/theme-test",
+              "title": "ThemeTest"
             }
           ]
         }
       ]
+    },
+    {
+      "name": "开发测试",
+      "path": "/dev-test"
     }
   ],
   "en-US": [
@@ -437,10 +445,18 @@
             {
               "path": "/collapse",
               "title": "Collapse"
+            },
+            {
+              "path": "/theme-test",
+              "title": "ThemeTest"
             }
           ]
         }
       ]
+    },
+    {
+      "name": "Develop Test",
+      "path": "/dev-test"
     }
   ]
 }

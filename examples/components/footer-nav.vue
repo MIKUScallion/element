@@ -22,38 +22,38 @@
     padding: 24px 0;
     color: #99a9bf;
     font-size: 14px;
-    
+
     &::after {
       content: '';
       display: block;
       clear: both;
     }
-     
+
     & i {
       transition: .3s;
       color: #d9def1;
       vertical-align: baseline;
     }
   }
-  
+
   .footer-nav-link {
     cursor: pointer;
     transition: .3s;
-    
+
     &:hover {
       color: #20a0ff;
-     
+
       & i {
         color: #20a0ff;
       }
     }
   }
-  
+
   .footer-nav-left {
     float: left;
     margin-left: -4px;
   }
-  
+
   .footer-nav-right {
     float: right;
     margin-right: -4px;
@@ -89,11 +89,14 @@
 
     methods: {
       setNav() {
+        // 写得不灵活
         let nav = navConfig[this.lang];
         this.nav = nav[0].children.concat(nav[1]);
+        // map
         nav[2].groups.map(group => group.list).forEach(list => {
           this.nav = this.nav.concat(list);
         });
+        this.nav = this.nav.concat(nav[3]);
       },
 
       updateNav() {

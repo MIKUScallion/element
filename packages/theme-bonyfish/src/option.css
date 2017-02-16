@@ -22,7 +22,7 @@
         cursor: not-allowed;
 
         &:hover {
-          background-color: var(--color-white);
+          background-color: var(--color-base-white);
         }
       }
 
@@ -31,7 +31,7 @@
       }
 
       &.selected {
-        color: var(--color-white);
+        color: var(--color-base-white);
         background-color: var(--select-option-selected);
 
         &.hover {

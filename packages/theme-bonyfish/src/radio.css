@@ -87,7 +87,7 @@
       }
 
       &::after {
-        circle: 6px var(--color-white);
+        circle: 6px var(--color-base-white);
         content: "";
         position: absolute;
         left: 50%;

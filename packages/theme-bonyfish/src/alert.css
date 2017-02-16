@@ -10,9 +10,9 @@
     box-sizing: border-box;
     border-radius: var(--alert-border-radius);
     position: relative;
-    background-color: var(--color-white);
+    background-color: var(--color-base-white);
     overflow: hidden;
-    color: var(--color-white);
+    color: var(--color-base-white);
     opacity: 1;
     display: table;
     transition: opacity .2s;
@@ -42,7 +42,7 @@
       font-size: var(--alert-icon-size);
       width: var(--alert-icon-size);
       display: table-cell;
-      color: var(--color-white);
+      color: var(--color-base-white);
       vertical-align: middle;
       @when big {
         font-size: var(--alert-icon-large-size);
@@ -59,14 +59,14 @@
     }
 
     & .el-alert__description {
-      color: var(--color-white);
+      color: var(--color-base-white);
       font-size: var(--alert-description-font-size);
       margin: 5px 0 0 0;
     }
 
     @e closebtn {
       font-size: var(--alert-close-font-size);
-      color: var(--color-white);
+      color: var(--color-base-white);
       opacity: 1;
       position: absolute 12px 15px * *;
       cursor: pointer;

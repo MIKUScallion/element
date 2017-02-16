@@ -47,7 +47,7 @@
       }
 
       &.active:not(.disabled) {
-        color: var(--color-white);
+        color: var(--color-base-white);
       }
 
       &.disabled {

@@ -11,29 +11,36 @@
 
   /* Colors
   -------------------------- */
-  --color-primary: #20a0ff;
+  --color-light-primary: #4BA5D7;
+  --color-primary: #2a92f4;
+  --color-dark-primary: #2981d4;
 
-  --color-success: #13ce66;
-  --color-warning: #f7ba2a;
-  --color-danger: #ff4949;
   --color-info: #50bfff;
+  --color-success: #13ce66;
+  --color-warning: #ffb451;
+  --color-danger: #fa0223;
+  --color-up: #df2424;
+  --color-down: #fa0223;
+  --color-average: #ff8600;
 
-  --color-secondary: color(var(--color-primary) s(99%) l(*0.9));
-  --color-white: #fff;
-  --color-dark-white: color(var(--color-white) blend(var(--color-primary) 2%));
-  --color-black: #000;
+  --color-base-white: #ffffff;
+  --color-base-black: #000000;
 
-  --color-base-black: color(var(--color-primary) h(+6) s(33%) l(18%));
-  --color-light-black: color(var(--color-base-black) h(+5) s(27%) l(27%));
-  --color-extra-light-black: color(var(--color-base-black) h(+2) s(19%) l(35%));
+  --color-black: #1f2b3d;
+  --color-light-black: #323e57;
+  --color-extra-light-black: #48556a;
 
-  --color-base-silver: color(var(--color-base-black) h(+3) s(16%) l(58%));
-  --color-light-silver: color(var(--color-base-black) h(+3) s(23%) l(67%));
-  --color-extra-light-silver: color(var(--color-base-black) s(26%) l(80%));
+  --color-silver: #8393a5;
+  --color-light-silver: #b6bbc3;
+  --color-extra-light-silver: #d1d6e0;
 
-  --color-base-gray: color(var(--color-base-black) s(28%) l(86%));
-  --color-light-gray: color(var(--color-base-black) h(+10) s(33%) l(92%));
-  --color-extra-light-gray: color(var(--color-base-black) h(+6) s(33%) l(95%));
+  --color-gray: #8393a5;
+  --color-light-gray: #b6bbc3;
+  --color-extra-light-gray: #d1d6e0;
+
+  --color-dark-white: #f5f6f8;
+
+  --color-local-disabled-primary: #C9DCF4;
 
   /* Link
   -------------------------- */
@@ -45,7 +52,7 @@
   --border-width-base: 1px;
   --border-style-base: solid;
   --border-color-base: var(--color-extra-light-silver);
-  --border-color-hover: var(--color-base-silver);
+  --border-color-hover: var(--color-silver);
   --border-base: var(--border-width-base) var(--border-style-base) var(--border-color-base);
   --border-radius-base: 4px;
   --border-radius-small: 2px;
@@ -58,12 +65,12 @@
 
   /* Fill
   -------------------------- */
-  --fill-base: var(--color-white);
+  --fill-base: var(--color-base-white);
 
   /* Font
   -------------------------- */
   --font-size-base: 14px;
-  --font-color-base: var(--color-base-black);
+  --font-color-base: var(--color-black);
   --font-color-disabled-base: #bbb;
 
   /* Size
@@ -80,7 +87,7 @@
   -------------------------- */
   --disabled-fill-base: var(--color-extra-light-gray);
   --disabled-color-base: #bbb;
-  --disabled-border-base: var(--color-base-gray);
+  --disabled-border-base: var(--color-gray);
 
   /* Icon
   -------------------------- */
@@ -89,14 +96,14 @@
   /* Checkbox
   -------------------------- */
   --checkbox-font-size: 14px;
-  --checkbox-color: var(--color-base-black);
+  --checkbox-color: var(--color-black);
   --checkbox-input-height: 18px;
   --checkbox-input-width: 18px;
   --checkbox-input-border-radius: var(--border-radius-base);
-  --checkbox-input-fill: var(--color-white);
+  --checkbox-input-fill: var(--color-base-white);
   --checkbox-input-border: var(--border-base);
   --checkbox-input-border-color: var(--border-color-base);
-  --checkbox-icon-color: var(--color-white);
+  --checkbox-icon-color: var(--color-base-white);
 
   --checkbox-disabled-input-border-color: var(--disabled-border-base);
   --checkbox-disabled-input-fill: var(--disabled-fill-base);
@@ -104,9 +111,9 @@
 
   --checkbox-disabled-checked-input-fill: var(--disabled-border-base);
   --checkbox-disabled-checked-input-border-color: var(--disabled-border-base);
-  --checkbox-disabled-checked-icon-color: var(--color-white);
+  --checkbox-disabled-checked-icon-color: var(--color-base-white);
 
-  --checkbox-checked-input-border-color: var(--color-secondary);
+  --checkbox-checked-input-border-color: var(--color-dark-primary);
   --checkbox-checked-input-fill: var(--color-primary);
   --checkbox-checked-icon-color: var(--fill-base);
 
@@ -115,14 +122,14 @@
   /* Radio
   -------------------------- */
   --radio-font-size: 14px;
-  --radio-color: var(--color-base-black);
+  --radio-color: var(--color-black);
   --radio-input-height: 18px;
   --radio-input-width: 18px;
   --radio-input-border-radius: var(--border-radius-circle);
-  --radio-input-fill: var(--color-white);
+  --radio-input-fill: var(--color-base-white);
   --radio-input-border: var(--border-base);
   --radio-input-border-color: var(--border-color-base);
-  --radio-icon-color: var(--color-white);
+  --radio-icon-color: var(--color-base-white);
 
   --radio-disabled-input-border-color: var(--disabled-border-base);
   --radio-disabled-input-fill: var(--disabled-fill-base);
@@ -130,17 +137,17 @@
 
   --radio-disabled-checked-input-fill: var(--disabled-border-base);
   --radio-disabled-checked-input-border-color: var(--disabled-border-base);
-  --radio-disabled-checked-icon-color: var(--color-white);
+  --radio-disabled-checked-icon-color: var(--color-base-white);
 
   --radio-checked-input-border-color: var(--color-primary);
-  --radio-checked-input-fill: var(--color-white);
+  --radio-checked-input-fill: var(--color-base-white);
   --radio-checked-icon-color: var(--color-primary);
 
   --radio-input-border-color-hover: var(--color-primary);
 
   --radio-button-font-size: var(--font-size-base);
   --radio-button-checked-fill: var(--color-primary);
-  --radio-button-checked-color: var(--color-white);
+  --radio-button-checked-color: var(--color-base-white);
   --radio-button-checked-border-color: var(--color-primary);
 
   /* Select
@@ -156,7 +163,7 @@
   --select-input-font-size: 12px;
 
   --select-tag-height: 24px;
-  --select-tag-color: var(--color-white);
+  --select-tag-color: var(--color-base-white);
   --select-tag-background: var(--color-primary);
 
   --select-option-color: var(--link-color);
@@ -170,7 +177,7 @@
   --select-group-height: 30px;
   --select-group-font-size: 12px;
 
-  --select-dropdown-background: var(--color-white);
+  --select-dropdown-background: var(--color-base-white);
   --select-dropdown-shadow: var(--box-shadow-base);
   --select-dropdown-empty-color: #999;
   --select-dropdown-max-height: 274px;
@@ -232,7 +239,7 @@
   --notification-font-size: var(--font-size-base);
   --notification-color: var(--border-color-hover);
   --notification-title-font-size: 16px;
-  --notification-title-color: var(--color-base-black);
+  --notification-title-color: var(--color-black);
 
   --notification-close-color: var(--color-extra-light-silver);
   --notification-close-hover-color: var(--color-light-silver);
@@ -252,7 +259,7 @@
   --input-border-color: var(--border-color-base);
   --input-border-radius: var(--border-radius-base);
   --input-border-color-hover: var(--border-color-hover);
-  --input-fill: var(--color-white);
+  --input-fill: var(--color-base-white);
   --input-fill-disabled: var(--disabled-fill-base);
   --input-color-disabled: var(--font-color-disabled-base);
   --input-icon-color: var(--color-extra-light-silver);
@@ -262,7 +269,7 @@
   --input-hover-border: var(--border-color-hover);
 
   --input-focus-border: var(--color-primary);
-  --input-focus-fill: var(--color-white);
+  --input-focus-fill: var(--color-base-white);
 
   --input-disabled-fill: var(--disabled-fill-base);
   --input-disabled-border: var(--disabled-border-base);
@@ -287,24 +294,24 @@
   --cascader-menu-border-color: var(--border-color-base);
   --cascader-menu-border-width: var(--border-width-base);
   --cascader-menu-color: var(--font-color-base);
-  --cascader-menu-option-color-active: var(--color-secondary);
-  --cascader-menu-option-fill-active: rgba(var(--color-secondary), 0.12);
+  --cascader-menu-option-color-active: var(--color-dark-primary);
+  --cascader-menu-option-fill-active: rgba(var(--color-dark-primary), 0.12);
   --cascader-menu-option-color-hover: var(--font-color-base);
-  --cascader-menu-option-fill-hover: rgba(var(--color-black), 0.06);
+  --cascader-menu-option-fill-hover: rgba(var(--color-base-black), 0.06);
   --cascader-menu-option-color-disabled: #999;
-  --cascader-menu-option-fill-disabled: rgba(var(--color-black), 0.06);
+  --cascader-menu-option-fill-disabled: rgba(var(--color-base-black), 0.06);
   --cascader-menu-option-empty-color: #666;
   --cascader-menu-group-color: #999;
-  --cascader-menu-shadow: 0 1px 2px rgba(var(--color-black), 0.14), 0 0 3px rgba(var(--color-black), 0.14);
+  --cascader-menu-shadow: 0 1px 2px rgba(var(--color-base-black), 0.14), 0 0 3px rgba(var(--color-base-black), 0.14);
   --cascader-menu-option-pinyin-color: #999;
-  --cascader-menu-submenu-shadow: 1px 1px 2px rgba(var(--color-black), 0.14), 1px 0 2px rgba(var(--color-black), 0.14);
+  --cascader-menu-submenu-shadow: 1px 1px 2px rgba(var(--color-base-black), 0.14), 1px 0 2px rgba(var(--color-base-black), 0.14);
 
   /* Group
   -------------------------- */
   --group-option-flex: 0 0 (1/5) * 100%;
   --group-option-offset-bottom: 12px;
-  --group-option-fill-hover: rgba(var(--color-black), 0.06);
-  --group-title-color: var(--color-black);
+  --group-option-fill-hover: rgba(var(--color-base-black), 0.06);
+  --group-title-color: var(--color-base-black);
   --group-title-font-size: var(--font-size-base);
   --group-title-width: 66px;
 
@@ -312,14 +319,14 @@
   -------------------------- */
   --tab-font-size: var(--font-size-base);
   --tab-border-line: 1px solid #e4e4e4;
-  --tab-header-color-active: var(--color-secondary);
+  --tab-header-color-active: var(--color-dark-primary);
   --tab-header-color-hover: var(--font-color-base);
   --tab-header-color: var(--font-color-base);
-  --tab-header-fill-active: rgba(var(--color-black), 0.06);
-  --tab-header-fill-hover: rgba(var(--color-black), 0.06);
+  --tab-header-fill-active: rgba(var(--color-base-black), 0.06);
+  --tab-header-fill-hover: rgba(var(--color-base-black), 0.06);
   --tab-vertical-header-width: 90px;
-  --tab-vertical-header-count-color: var(--color-white);
-  --tab-vertical-header-count-fill: var(--color-secondary);
+  --tab-vertical-header-count-color: var(--color-base-white);
+  --tab-vertical-header-count-fill: var(--color-dark-primary);
 
   /* Button
   -------------------------- */
@@ -341,8 +348,8 @@
   --button-mini-padding-vertical: 4px;
   --button-mini-padding-horizontal: 4px;
 
-  --button-default-color: var(--color-base-black);
-  --button-default-fill: var(--color-white);
+  --button-default-color: var(--color-black);
+  --button-default-fill: var(--color-base-white);
   --button-default-border: #c4c4c4;
 
   --button-ghost-color: #666;
@@ -354,23 +361,23 @@
   --button-disabled-border: var(--disabled-border-base);
 
   --button-primary-border: var(--color-primary);
-  --button-primary-color: var(--color-white);
+  --button-primary-color: var(--color-base-white);
   --button-primary-fill: var(--color-primary);
 
   --button-success-border: var(--color-success);
-  --button-success-color: var(--color-white);
+  --button-success-color: var(--color-base-white);
   --button-success-fill: var(--color-success);
 
   --button-warning-border: var(--color-warning);
-  --button-warning-color: var(--color-white);
+  --button-warning-color: var(--color-base-white);
   --button-warning-fill: var(--color-warning);
 
   --button-danger-border: var(--color-danger);
-  --button-danger-color: var(--color-white);
+  --button-danger-color: var(--color-base-white);
   --button-danger-fill: var(--color-danger);
 
   --button-info-border: var(--color-info);
-  --button-info-color: var(--color-white);
+  --button-info-color: var(--color-base-white);
   --button-info-fill: var(--color-info);
 
   --button-hover-tint-percent: 20%;
@@ -396,7 +403,7 @@
 
   /* Dialog
  -------------------------- */
-  --dialog-background-color: var(--color-secondary);
+  --dialog-background-color: var(--color-dark-primary);
   --dialog-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   --dialog-tiny-width: 30%;
   --dialog-small-width: 50%;
@@ -409,39 +416,39 @@
   /* Table
  -------------------------- */
   --table-border-color: color(var(--border-color-base) h(-3) s(27%) l(90%));
-  --table-text-color: var(--color-base-black);
+  --table-text-color: var(--color-black);
   --table-header-background: var(--color-extra-light-gray);
 
   /* Pagination
  -------------------------- */
   --pagination-font-size: 13px;
-  --pagination-fill: var(--color-white);
+  --pagination-fill: var(--color-base-white);
   --pagination-color: var(--link-color);
   --pagination-border-radius: 2px;
   --pagination-button-color: var(--color-light-silver);
   --pagination-button-size: 28px;
   --pagination-button-disabled-color: #e4e4e4;
-  --pagination-button-disabled-fill: var(--color-white);
+  --pagination-button-disabled-fill: var(--color-base-white);
   --pagination-border-color: var(--disabled-border-base);
   --pagination-hover-fill: var(--color-primary);
-  --pagination-hover-color: var(--color-white);
+  --pagination-hover-color: var(--color-base-white);
 
   /* Popover
  -------------------------- */
-  --popover-fill: var(--color-white);
+  --popover-fill: var(--color-base-white);
   --popover-font-size: 12px;
   --popover-border-color: var(--disabled-border-base);
   --popover-arrow-size: 6px;
   --popover-padding: 10px;
   --popover-title-font-size: 13px;
-  --popover-title-color: var(--color-base-black);
+  --popover-title-color: var(--color-black);
 
   /* Tooltip
   -------------------------- */
-  --tooltip-fill: var(--color-base-black);
-  --tooltip-color: var(--color-white);
+  --tooltip-fill: var(--color-black);
+  --tooltip-color: var(--color-base-white);
   --tooltip-font-size: 12px;
-  --tooltip-border-color: var(--color-base-black);
+  --tooltip-border-color: var(--color-black);
   --tooltip-arrow-size: 6px;
   --tooltip-padding: 10px;
 
@@ -449,7 +456,7 @@
   -------------------------- */
   --tag-padding: 0 5px;
   --tag-fill: var(--border-color-hover);
-  --tag-color: var(--color-white);
+  --tag-color: var(--color-base-white);
   --tag-close-color: #666;
   --tag-font-size: 12px;
   --tag-border-radius: 4px;
@@ -525,7 +532,7 @@
   --dark-menu-item-color: var(--link-color);
   --dark-menu-item-fill: var(--color-light-black);
   --dark-menu-item-hover-fill: var(--link-color);
-  --dark-submenu-item-fill: var(--color-base-black);
+  --dark-submenu-item-fill: var(--color-black);
 
   /* Rate
   --------------------------*/
@@ -577,10 +584,10 @@
   --collapse-header-height: 43px;
   --collapse-border-radius: 0;
   --collapse-header-padding: 20px;
-  --collapse-header-fill: var(--color-white);
+  --collapse-header-fill: var(--color-base-white);
   --collapse-header-color: var(--color-extra-light-black);
   --collapse-header-size: 13px;
   --collapse-content-fill: var(--color-dark-white);
   --collapse-content-size: 13px;
-  --collapse-content-color: var(--color-base-black);
+  --collapse-content-color: var(--color-black);
 }

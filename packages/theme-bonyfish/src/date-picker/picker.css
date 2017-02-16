@@ -27,7 +27,7 @@
       min-width: 180px;
       box-sizing: border-box;
       box-shadow: 0 2px 6px #ccc;
-      background: var(--color-white);
+      background: var(--color-base-white);
       z-index: 10;
       top: 41px;
     }

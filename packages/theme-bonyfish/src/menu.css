@@ -41,7 +41,7 @@
       }
       
       & .el-submenu .el-menu {
-        background-color: var(--color-base-black);
+        background-color: var(--color-black);
 
         & .el-menu-item:hover {
           background-color: var(--color-extra-light-black);
@@ -76,9 +76,9 @@
           position: absolute;
           top: 65px;
           left: 0;
-          border:1px solid var(--color-base-gray);
+          border:1px solid var(--color-gray);
           padding: 5px 0;
-          background-color: var(--color-white);
+          background-color: var(--color-base-white);
           z-index: 100;
           min-width: 100%;
           box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.12), 0px 0px 6px 0px rgba(0,0,0,0.04);
@@ -91,7 +91,7 @@
         }
 
         & .el-menu-item {
-          background-color: var(--color-white);
+          background-color: var(--color-base-white);
           float: none;
           height: 36px;
           line-height: 36px;
@@ -128,7 +128,7 @@
             color: var(--color-extra-light-black);
 
             &:hover {
-              background-color: var(--color-base-gray);
+              background-color: var(--color-gray);
             }
           }
           .el-menu-item.is-active {
@@ -152,7 +152,7 @@
       margin-right: 0;
     }
     &:hover {
-      background-color: var(--color-base-gray);
+      background-color: var(--color-gray);
     }
     @when active {
       color: var(--color-primary);
@@ -165,7 +165,7 @@
       @extend menu-item;
 
       &:hover {
-        background-color: var(--color-base-gray);
+        background-color: var(--color-gray);
       }
     }
     & .el-menu {
@@ -177,7 +177,7 @@
       padding: 0 45px;
 
       &:hover {
-        background-color: var(--color-base-gray);
+        background-color: var(--color-gray);
       }
     }
     @e icon-arrow {

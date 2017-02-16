@@ -44,7 +44,7 @@
         position: absolute;
         font-size: var(--switch-font-size);
         display: inline-block;
-        color: var(--color-white);
+        color: var(--color-base-white);
       }
     }
 
@@ -75,7 +75,7 @@
         transition: transform .3s;
         size: var(--switch-button-size);
         z-index: 20;
-        background-color: var(--color-white);
+        background-color: var(--color-base-white);
       }
     }
 

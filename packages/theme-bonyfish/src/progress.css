@@ -102,7 +102,7 @@
     @e innerText {
       display: inline-block;
       vertical-align: middle;
-      color: var(--color-white);
+      color: var(--color-base-white);
       font-size: 12px;
       margin: 0 5px;
     }

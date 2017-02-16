@@ -83,31 +83,31 @@
         border-style: solid;
 
         @when process {
-          color: var(--color-white);
+          color: var(--color-base-white);
           background-color: var(--color-extra-light-silver);
           border-color: var(--color-extra-light-silver);
         }
 
         @when wait {
           color: var(--color-extra-light-silver);
-          background-color: var(--color-white);
+          background-color: var(--color-base-white);
           border-color: var(--color-extra-light-silver);
         }
 
         @when success {
-          color: var(--color-white);
+          color: var(--color-base-white);
           background-color: var(--color-success);
           border-color: var(--color-success);
         }
 
         @when error {
-          color: var(--color-white);
+          color: var(--color-base-white);
           background-color: var(--color-danger);
           border-color: var(--color-danger);
         }
 
         @when finish {
-          color: var(--color-white);
+          color: var(--color-base-white);
           background-color: var(--color-primary);
           border-color: var(--color-primary);
         }
@@ -182,7 +182,7 @@
       line-height: 14px;
 
       @when process {
-        color: var(--color-base-silver);
+        color: var(--color-silver);
       }
 
       @when wait {

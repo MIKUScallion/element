@@ -40,7 +40,7 @@
       height: 100%;
       top: 0;
       left: 0;
-      background-color: var(--color-white);
+      background-color: var(--color-base-white);
       opacity: 0.24;
       transition: .2s;
     }

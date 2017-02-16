@@ -215,10 +215,6 @@
             {
               "path": "/collapse",
               "title": "Collapse 折叠面板"
-            },
-            {
-              "path": "/theme-test",
-              "title": "ThemeTest"
             }
           ]
         }

@@ -11,20 +11,20 @@
 
   /* Colors
   -------------------------- */
-  --color-light-primary: #4BA5D7;
+  --color-light-primary: #4ba5d7;
   --color-primary: #2a92f4;
   --color-dark-primary: #2981d4;
 
-  --color-info: #50bfff;
-  --color-success: #13ce66;
+  --color-success: #2a92f4;
   --color-warning: #ffb451;
   --color-danger: #fa0223;
+  --color-info: #2a92f4;
   --color-up: #df2424;
-  --color-down: #fa0223;
+  --color-down: #1bce5d;
   --color-average: #ff8600;
 
-  --color-base-white: #ffffff;
   --color-base-black: #000000;
+  --color-base-white: #ffffff;
 
   --color-black: #1f2b3d;
   --color-light-black: #323e57;
@@ -34,13 +34,13 @@
   --color-light-silver: #b6bbc3;
   --color-extra-light-silver: #d1d6e0;
 
-  --color-gray: #8393a5;
-  --color-light-gray: #b6bbc3;
-  --color-extra-light-gray: #d1d6e0;
+  --color-gray: #e6eff8;
+  --color-light-gray: #e4e7f1;
+  --color-extra-light-gray: #eef1f6;
 
   --color-dark-white: #f5f6f8;
 
-  --color-local-disabled-primary: #C9DCF4;
+  --color-local-disabled-primary: #c9dcf4;
 
   /* Link
   -------------------------- */

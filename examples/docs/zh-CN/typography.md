@@ -33,18 +33,12 @@
       font-size: 20px;
     }
     .h2 {
-      font-size: 18px;
-    }
-    .h3 {
       font-size: 16px;
     }
-    .text-regular {
+    .h3 {
       font-size: 14px;
     }
-    .text-small {
-      font-size: 13px;
-    }
-    .text-smaller {
+    .h4 {
       font-size: 12px;
     }
     .color-dark-light {
@@ -78,6 +72,10 @@
 
 ### 中文字体
 
+<div class="demo-typo-box typo-Microsoft">
+  和畅惠风
+  <div class="name">Microsoft YaHei</div>
+</div>
 <div class="demo-typo-box typo-PingFang">
   和畅惠风
   <div class="name">PingFang SC</div>
@@ -85,10 +83,6 @@
 <div class="demo-typo-box typo-Hiragino">
   和畅惠风
   <div class="name">Hiragino Sans GB</div>
-</div>
-<div class="demo-typo-box typo-Microsoft">
-  和畅惠风
-  <div class="name">Microsoft YaHei</div>
 </div>
 
 ### 英文／数字字体
@@ -109,7 +103,7 @@
 ### Font-family 代码
 
 ```css
-font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+font-family: "Helvetica Neue",Helvetica,Arial,"Microsoft YaHei","微软雅黑","PingFang SC","Hiragino Sans GB",sans-serif;
 ```
 
 ### 字体使用规范
@@ -117,34 +111,24 @@ font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Micros
 <table class="demo-typo-size">
   <tbody>
     <tr>
-      <td class="h1">主标题</td>
-      <td class="h1">用 Element 快速搭建页面</td>
-      <td class="color-dark-light">20px  Extra large</td>
+      <td class="h1">Extra Large</td>
+      <td class="h1">我是超级大号字体</td>
+      <td class="color-dark-light">20px Extra large</td>
     </tr>
     <tr>
-      <td class="h2">标题</td>
-      <td class="h2">用 Element 快速搭建页面</td>
-      <td class="color-dark-light">18px large</td>
+      <td class="h2">Large</td>
+      <td class="h2">我是大号字体</td>
+      <td class="color-dark-light">16px Large</td>
     </tr>
     <tr>
-      <td class="h3">小标题</td>
-      <td class="h3">用 Element 快速搭建页面</td>
-      <td class="color-dark-light">16px Medium</td>
+      <td class="h3">Normal</td>
+      <td class="h3">我是普通字体</td>
+      <td class="color-dark-light">14px Normal</td>
     </tr>
     <tr>
-      <td class="text-regular">正文</td>
-      <td class="text-regular">用 Element 快速搭建页面</td>
-      <td class="color-dark-light">14px Small</td>
-    </tr>
-    <tr>
-      <td class="text-small">正文（小）</td>
-      <td class="text-small">用 Element 快速搭建页面</td>
-      <td class="color-dark-light">13px Extra Small</td>
-    </tr>
-    <tr>
-      <td class="text-smaller">辅助文字</td>
-      <td class="text-smaller">用 Element 快速搭建页面</td>
-      <td class="color-dark-light">12px Extra Extra Small</td>
+      <td class="h4">Small</td>
+      <td class="h4">我是小号字体</td>
+      <td class="color-dark-light">12px Small</td>
     </tr>
   </tbody>
 </table>

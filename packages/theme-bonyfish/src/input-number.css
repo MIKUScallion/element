@@ -5,7 +5,7 @@
 @component-namespace el {
   @b input-number {
     display: inline-block;
-    overflow: hidden;
+    /*overflow: hidden;*/
     width: 180px;
     position: relative;
 
@@ -57,11 +57,27 @@
         }
       }
     }
+    @m extraLarge {
+      width: 200px;
+
+      & .el-input-number__increase, .el-input-number__decrease {
+        line-height: calc(var(--input-extra-large-height) - 2);
+        width: var(--input-extra-large-height);
+        font-size: var(--input-extra-large-font-size);
+      }
+      & .el-input-number__decrease {
+        right: calc(var(--input-extra-large-height) + 1px);
+      }
+      & .el-input__inner {
+        padding-right: calc(var(--input-extra-large-height) * 2 + 10);
+      }
+    }
+
     @m large {
       width: 200px;
 
       & .el-input-number__increase, .el-input-number__decrease {
-        line-height: var(--input-large-height);
+        line-height: calc(var(--input-large-height) - 2);
         width: var(--input-large-height);
         font-size: var(--input-large-font-size);
       }

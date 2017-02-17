@@ -332,22 +332,22 @@ export default {
 ```html
 <div class="demo-input-size">
   <el-input
-    size="large"
-    placeholder="Please Input"
+    size="extraLarge"
+    placeholder="请输入内容"
     v-model="input6">
   </el-input>
   <el-input
-    placeholder="Please Input"
+    size="large"
+    placeholder="请输入内容"
     v-model="input7">
   </el-input>
   <el-input
-    size="small"
-    placeholder="Please Input"
+    placeholder="请输入内容"
     v-model="input8">
   </el-input>
   <el-input
     size="mini"
-    placeholder="Please Input"
+    placeholder="请输入内容"
     v-model="input9">
   </el-input>
 </div>

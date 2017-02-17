@@ -91,15 +91,15 @@ Allows you to define incremental steps.
 
 ### Size
 
-Additional `large` and `small` sizes of the input box are available
+Additional `extra large` and `large` sizes of the input box are available
 
 :::demo
 
 ```html
 <template>
-  <el-input-number size="large" v-model="num4"></el-input-number>
-  <el-input-number v-model="num5"></el-input-number>
-  <el-input-number size="small" v-model="num6"></el-input-number>
+  <el-input-number size="extraLarge" v-model="num4"></el-input-number>
+  <el-input-number size="large" v-model="num5"></el-input-number>
+  <el-input-number   v-model="num6"></el-input-number>
 </template>
 <script>
   export default {

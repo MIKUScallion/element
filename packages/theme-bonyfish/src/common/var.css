@@ -255,7 +255,7 @@
   --input-font-size: var(--font-size-base);
   --input-color: var(--font-color-base);
   --input-width: 140px;
-  --input-height: 36px;
+  --input-height: 30px;
   --input-border: var(--border-base);
   --input-border-color: var(--border-color-base);
   --input-border-radius: var(--border-radius-base);
@@ -277,11 +277,11 @@
   --input-disabled-color: var(--disabled-color-base);
   --input-disabled-placeholder-color: var(--color-extra-light-silver);
 
-  --input-large-font-size: 16px;
-  --input-large-height: 42px;
+  --input-extra-large-font-size: 16px;
+  --input-extra-large-height: 42px;
 
-  --input-small-font-size: 13px;
-  --input-small-height: 30px;
+  --input-large-font-size: 14px;
+  --input-large-height: 36px;
 
   --input-mini-font-size: 12px;
   --input-mini-height: 22px;

@@ -97,15 +97,15 @@
 
 ### 尺寸
 
-额外提供了 `large`、`small` 两种尺寸的数字输入框
+额外提供了 `extra large`、`large` 两种尺寸的数字输入框
 
 :::demo
 
 ```html
 <template>
-  <el-input-number size="large" v-model="num4"></el-input-number>
-  <el-input-number v-model="num5"></el-input-number>
-  <el-input-number size="small" v-model="num6"></el-input-number>
+  <el-input-number size="extraLarge" v-model="num4"></el-input-number>
+  <el-input-number size="large" v-model="num5"></el-input-number>
+  <el-input-number   v-model="num6"></el-input-number>
 </template>
 <script>
   export default {

@@ -363,20 +363,20 @@ export default {
 
 ### 尺寸
 
-::: demo 可通过 `size` 属性指定输入框的尺寸，除了默认的大小外，还提供了 large、small 和 mini 三种尺寸。
+::: demo 可通过 `size` 属性指定输入框的尺寸，除了默认的大小外，还提供了 extra large, large 和 mini 三种尺寸。
 ```html
 <div class="demo-input-size">
   <el-input
-    size="large"
+    size="extraLarge"
     placeholder="请输入内容"
     v-model="input6">
   </el-input>
   <el-input
+    size="large"
     placeholder="请输入内容"
     v-model="input7">
   </el-input>
   <el-input
-    size="small"
     placeholder="请输入内容"
     v-model="input8">
   </el-input>

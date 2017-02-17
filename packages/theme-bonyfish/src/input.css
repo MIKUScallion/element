@@ -37,7 +37,6 @@
         outline: none;
         border-color: var(--input-focus-border);
         box-shadow: 0 0 4px var(--input-focus-border);
-        box-shadow-color: var(--input-focus-border);
       }
     }
 
@@ -94,18 +93,18 @@
         }
       }
     }
+    @m extraLarge {
+      font-size: var(--input-extra-large-font-size);
+
+      & .el-input__inner {
+        height: var(--input-extra-large-height);
+      }
+    }
     @m large {
       font-size: var(--input-large-font-size);
 
       & .el-input__inner {
         height: var(--input-large-height);
-      }
-    }
-    @m small {
-      font-size: var(--input-small-font-size);
-
-      & .el-input__inner {
-        height: var(--input-small-height);
       }
     }
     @m mini {

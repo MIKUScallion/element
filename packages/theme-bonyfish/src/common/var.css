@@ -283,8 +283,8 @@
   --input-large-font-size: 14px;
   --input-large-height: 36px;
 
-  --input-mini-font-size: 12px;
-  --input-mini-height: 22px;
+  --input-small-font-size: 12px;
+  --input-small-height: 22px;
 
   /* Cascader
   -------------------------- */

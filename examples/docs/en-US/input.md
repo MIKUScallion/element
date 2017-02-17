@@ -328,7 +328,7 @@ export default {
 
 ### Sizes
 
-::: demo Add `size` attribute to change the size of Input. In addition to the default size, there are three other options: `large`, `small` and `mini`.
+::: demo Add `size` attribute to change the size of Input. In addition to the default size, there are three other options: `extraLarge`, `large` and `small`.
 ```html
 <div class="demo-input-size">
   <el-input
@@ -346,7 +346,7 @@ export default {
     v-model="input8">
   </el-input>
   <el-input
-    size="mini"
+    size="small"
     placeholder="请输入内容"
     v-model="input9">
   </el-input>

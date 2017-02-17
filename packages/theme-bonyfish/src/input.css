@@ -107,11 +107,11 @@
         height: var(--input-large-height);
       }
     }
-    @m mini {
-      font-size: var(--input-mini-font-size);
+    @m small {
+      font-size: var(--input-small-font-size);
 
       & .el-input__inner {
-        height: var(--input-mini-height);
+        height: var(--input-small-height);
       }
     }
   }

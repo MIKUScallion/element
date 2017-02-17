@@ -85,10 +85,10 @@
   }
 
   .bg-gray {
-    background-color: #e6eff8;
+    background-color: #e4e7f1;
   }
   .bg-gray-light {
-    background-color: #e4e7f1;
+    background-color: #e6eff8;
   }
   .bg-gray-lighter {
     background-color: #eef1f6;
@@ -186,8 +186,8 @@ Element 主要品牌颜色是鲜艳、友好的蓝色。
   </el-col>
   <el-col :span="6">
     <div class="demo-color-box-group">
-      <div class="demo-color-box color-gray bg-gray">Gray<div class="value">#e6eff8</div></div>
-      <div class="demo-color-box color-gray bg-gray-light">Light Gray<div class="value">#e4e7f1</div></div>
+      <div class="demo-color-box color-gray bg-gray">Gray<div class="value">#e4e7f1</div></div>
+      <div class="demo-color-box color-gray bg-gray-light">Light Gray<div class="value">#e6eff8</div></div>
       <div class="demo-color-box color-gray bg-gray-lighter">Extra Light Gray<div class="value">#eef1f6</div></div>
     </div>
   </el-col>

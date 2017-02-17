@@ -13,6 +13,7 @@
       <!-- 前置元素 -->
       <div class="el-input-group__prepend" v-if="$slots.prepend">
         <slot name="prepend"></slot>
+        <!-- <p class="delimiter">|</p> -->
       </div>
       <!-- input 图标 -->
       <slot name="icon">

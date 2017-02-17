@@ -15,7 +15,7 @@
     & + .el-radio {
       margin-left: 15px;
     }
-    
+
     @e input {
       white-space: nowrap;
       cursor: pointer;
@@ -87,7 +87,7 @@
       }
 
       &::after {
-        circle: 6px var(--color-base-white);
+        circle: 10px var(--color-primary);
         content: "";
         position: absolute;
         left: 50%;
@@ -157,7 +157,7 @@
 
       & [class*="el-icon-"] {
         line-height: 0.9;
-        
+
         & + span {
           margin-left: 5px;
         }

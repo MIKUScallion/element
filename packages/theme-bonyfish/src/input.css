@@ -36,6 +36,8 @@
       &:focus {
         outline: none;
         border-color: var(--input-focus-border);
+        box-shadow: 0 0 4px var(--input-focus-border);
+        box-shadow-color: var(--input-focus-border);
       }
     }
 
@@ -76,13 +78,13 @@
     @when active {
       .el-input__inner {
         outline: none;
-        border-color: var(--input-focus-border);
+        border-color: var(--input-hover-border);
       }
     }
 
     @when disabled {
       .el-input__inner {
-        background-color: var(--disabled-fill-base);
+        background-color: var(--color-base-white);
         border-color: var(--disabled-border-base);
         color: var(--disabled-color-base);
         cursor: not-allowed;
@@ -126,8 +128,8 @@
       display: table-cell;
     }
     @e append, prepend {
-      background-color: var(--color-dark-white);
-      color: var(--color-light-silver);
+      background-color: var(--color-base-white);
+      color: var(--input-color);
       vertical-align: middle;
       display: table-cell;
       position: relative;
@@ -136,7 +138,9 @@
       padding: 0 10px;
       width: 1%;
       white-space: nowrap;
-
+      &::placeholder {
+        color: var(--input-color);
+      }
       & .el-select,
       & .el-button {
         display: block;
@@ -155,6 +159,13 @@
       & .el-button,
       & .el-input {
         font-size: inherit;
+      }
+      & .delimiter {
+        float: right;
+        width: 1%;
+        margin: 0;
+
+
       }
     }
     @e prepend {
@@ -213,6 +224,8 @@
       &:focus {
         outline: none;
         border-color: var(--input-focus-border);
+        box-shadow: 0 0 4px var(--input-focus-border);
+        box-shadow-color: var(--input-focus-border);
       }
     }
 

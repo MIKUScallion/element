@@ -63,7 +63,7 @@
       @when checked {
         .el-checkbox__inner {
           background-color: var(--checkbox-checked-input-fill);
-          border-color: var(--checkbox-checked-input-border-color);
+          border-color: var(--checkbox-checked-input-fill);
 
           &::after {
             transform: rotate(45deg) scaleY(1);
@@ -115,14 +115,14 @@
       &::after {
         box-sizing: content-box;
         content: "";
-        border: 2px solid var(--checkbox-checked-icon-color);
+        border: 2px solid var(--color-base-white);
         border-left: 0;
         border-top: 0;
         height: 8px;
-        left: 5px;
+        left: 4px;
         position: absolute;
         top: 1px;
-        transform: rotate(45deg) scaleY(0);
+        transform: rotate(45deg) scaleY(1);
         width: 4px;
         transition: transform .15s cubic-bezier(.71,-.46,.88,.6) .05s;
         transform-origin: center;

@@ -6,7 +6,7 @@
   @b select-dropdown {
     @e item {
       font-size: var(--select-font-size);
-      padding: 8px 10px;
+      padding: 5px 10px;
       position: relative;
       white-space: nowrap;
       overflow: hidden;
@@ -16,6 +16,16 @@
       line-height: 1.5;
       box-sizing: border-box;
       cursor: pointer;
+      &:before {
+        content: '';
+        position: absolute;
+        display: none;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 4px;
+        background-color: var(--select-option-hover-bar);
+      }
 
       @when disabled {
         color: var(--select-option-disabled-color);
@@ -28,14 +38,21 @@
 
       &.hover {
         background-color: var(--select-option-hover-background);
+
+        &:before {
+          display: block;
+        }
       }
 
       &.selected {
         color: var(--color-base-white);
-        background-color: var(--select-option-selected);
+        background-color: var(--select-option-selected-background);
 
         &.hover {
           background-color: var(--select-option-selected-hover);
+        }
+        &:before {
+          display: none;
         }
       }
 

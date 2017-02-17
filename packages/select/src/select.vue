@@ -102,8 +102,8 @@
   import { t } from 'element-ui/src/locale';
   import merge from 'element-ui/src/utils/merge';
   const sizeMap = {
-    'large': 42,
-    'small': 30,
+    'extraLarge': 42,
+    'large': 36,
     'mini': 22
   };
 
@@ -479,7 +479,7 @@
         this.$nextTick(() => {
           let inputChildNodes = this.$refs.reference.$el.childNodes;
           let input = [].filter.call(inputChildNodes, item => item.tagName === 'INPUT')[0];
-          input.style.height = Math.max(this.$refs.tags.clientHeight + 6, sizeMap[this.size] || 36) + 'px';
+          input.style.height = Math.max(this.$refs.tags.clientHeight, sizeMap[this.size] || 30) + 'px';
           if (this.visible && this.emptyText !== false) {
             this.broadcast('ElSelectDropdown', 'updatePopper');
           }

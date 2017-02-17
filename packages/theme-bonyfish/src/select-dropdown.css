@@ -20,6 +20,9 @@
 
         &.hover {
           background-color: var(--select-option-hover-background);
+          &:before {
+            display: block;
+          }
         }
 
         &::after {

@@ -24,8 +24,9 @@
       box-shadow: 0 0 6px 0 rgba(0,0,0,0.04), 0 2px 4px 0 rgba(0,0,0,0.12);
 
       & li {
+        position: relative;
         list-style: none;
-        line-height: 36px;
+        line-height: 30px;
         padding: 0 10px;
         margin: 0;
         cursor: pointer;
@@ -35,15 +36,32 @@
         overflow: hidden;
         text-overflow: ellipsis;
 
+        &:before {
+          content: '';
+          position: absolute;
+          display: none;
+          left: 0;
+          top: 0;
+          bottom: 0;
+          width: 4px;
+          background-color: var(--select-option-hover-bar);
+        }
         &:hover {
           background-color: var(--select-option-hover-background);
+          &:before {
+            display: block;
+          }
         }
-        &.highlighted {
-          background-color: var(--color-primary);
+        &.highlighted, &:active {
           color: var(--color-base-white);
-        }
-        &:active {
-          background-color: darken(var(--color-primary), 0.2);
+          background-color: var(--select-option-selected-background);
+
+          &:hover {
+            background-color: var(--select-option-selected-hover);
+          }
+          &:before {
+            display: none;
+          }
         }
         &.divider {
           margin-top: 6px;

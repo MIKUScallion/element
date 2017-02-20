@@ -195,12 +195,12 @@
     }
     &:first-child {
       .el-radio-button__inner {
-        border-radius: var(--border-radius-base) 0 0 var(--border-radius-base);
+        border-radius: var(--border-radius-small) 0 0 var(--border-radius-small);
       }
     }
     &:last-child {
       .el-radio-button__inner {
-        border-radius: 0 var(--border-radius-base) var(--border-radius-base) 0;
+        border-radius: 0 var(--border-radius-small) var(--border-radius-small) 0;
       }
     }
     @m large {

@@ -12,7 +12,7 @@
 
     @e popper {
       position: absolute;
-      border-radius: 4px;
+      border-radius: 2px;
       padding: var(--tooltip-padding);
       z-index: var(--index-popper);
       font-size: var(--tooltip-font-size);

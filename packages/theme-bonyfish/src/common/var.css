@@ -100,7 +100,7 @@
   --checkbox-color: var(--color-black);
   --checkbox-input-height: 16px;
   --checkbox-input-width: 16px;
-  --checkbox-input-border-radius: var(--border-radius-base);
+  --checkbox-input-border-radius: var(--border-radius-small);
   --checkbox-input-fill: var(--color-base-white);
   --checkbox-input-border: var(--border-base);
   --checkbox-input-border-color: var(--border-color-base);
@@ -191,7 +191,7 @@
   /* Alert
   -------------------------- */
   --alert-padding: 8px 16px;
-  --alert-border-radius: var(--border-radius-base);
+  --alert-border-radius: var(--border-radius-small);
   --alert-title-font-size: 13px;
   --alert-description-font-size: 12px;
   --alert-close-font-size: 12px;
@@ -208,7 +208,7 @@
   /* Message Box
   -------------------------- */
   --msgbox-width: 420px;
-  --msgbox-border-radius: 3px;
+  --msgbox-border-radius: 2px;
   --msgbox-font-size: 16px;
   --msgbox-content-font-size: 14px;
   --msgbox-content-color: var(--link-color);
@@ -260,7 +260,7 @@
   --input-height: 30px;
   --input-border: var(--border-base);
   --input-border-color: var(--border-color-base);
-  --input-border-radius: var(--border-radius-base);
+  --input-border-radius: var(--border-radius-small);
   --input-border-color-hover: var(--border-color-hover);
   --input-fill: var(--color-base-white);
   --input-fill-disabled: var(--disabled-fill-base);
@@ -292,7 +292,7 @@
   -------------------------- */
   --cascader-menu-fill: var(--fill-base);
   --cascader-menu-font-size: var(--font-size-base);
-  --cascader-menu-radius: var(--border-radius-base);
+  --cascader-menu-radius: var(--border-radius-small);
   --cascader-menu-border: var(--border-base);
   --cascader-menu-border-color: var(--border-color-base);
   --cascader-menu-border-width: var(--border-width-base);
@@ -334,7 +334,7 @@
   /* Button
   -------------------------- */
   --button-font-size: 14px;
-  --button-border-radius: var(--border-radius-base);
+  --button-border-radius: var(--border-radius-small);
   --button-paddding: 5px 20px;
   --button-padding-vertical: 10px;
   --button-padding-horizontal: 15px;
@@ -462,7 +462,7 @@
   --tag-color: var(--color-base-white);
   --tag-close-color: #666;
   --tag-font-size: 12px;
-  --tag-border-radius: 4px;
+  --tag-border-radius: 2px;
 
   --tag-gray-fill: var(--color-light-gray);
   --tag-gray-border: var(--color-light-gray);
@@ -501,7 +501,7 @@
   /* Card
   --------------------------*/
   --card-border-color: var(--disabled-border-base);
-  --card-border-radius: 4px;
+  --card-border-radius: 2px;
   --card-padding: 20px;
 
   /* Slider
@@ -513,7 +513,7 @@
   --slider-disable-color: var(--color-extra-light-silver);
 
   --slider-margin: 16px 0;
-  --slider-border-radius: 3px;
+  --slider-border-radius: 2px;
   --slider-height: 4px;
   --slider-button-size: 12px;
   --slider-button-wrapper-size: 36px;
@@ -522,7 +522,7 @@
   /* Steps
   --------------------------*/
   --steps-border-color: var(--disabled-border-base);
-  --steps-border-radius: 4px;
+  --steps-border-radius: 2px;
   --steps-padding: 20px;
 
   /* Menu

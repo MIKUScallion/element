@@ -124,7 +124,7 @@
       height: var(--select-tag-height);
       line-height: var(--select-tag-height);
       font-size: var(--select-font-size);
-      border-radius: var(--border-radius-base);
+      border-radius: var(--border-radius-small);
       color: var(--select-tag-color);
       background-color: var(--select-tag-background);
 

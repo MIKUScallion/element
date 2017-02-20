@@ -48,7 +48,7 @@
         color: var(--color-base-white);
         background-color: var(--select-option-selected-background);
 
-        &.hover {
+        &:hover {
           background-color: var(--select-option-selected-hover);
         }
         &:before {

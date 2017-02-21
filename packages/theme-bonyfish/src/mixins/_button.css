@@ -3,8 +3,7 @@
   background-color: $background-color;
   border-color: $border-color;
 
-  &:hover,
-  &:focus {
+  &:hover {
     background: color($background-color h(+0) s(85%) l(*1.27));
     border-color: color($border-color h(+0) s(85%) l(*1.27));
     color: $color;
@@ -29,11 +28,10 @@
     border-color: var(--button-plain-border);
     color: @border-color;
 
-    &:hover,
-    &:focus {
+    &:hover {
       background: var(--color-base-white);
-      border-color: $border-color;
-      color: $background-color;
+      border-color: color($border-color h(+0) s(85%) l(*1.27));
+      color: color($background-color h(+0) s(85%) l(*1.27));
     }
 
     &:active {

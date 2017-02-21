@@ -24,8 +24,7 @@
 
     @mixin button-size var(--button-padding-vertical), var(--button-padding-horizontal), var(--button-font-size), var(--button-border-radius);
 
-    &:hover,
-    &:focus {
+    &:hover {
       color: color(var(--color-primary) h(+0) s(85%) l(*1.27));
       border-color: @color;
     }
@@ -50,17 +49,16 @@
       color: var(--button-plain-border);
       border-color: @color;
 
-      &:hover,
-      &:focus {
+      &:hover {
         background: var(--color-base-white);
-        border-color: var(--color-primary);
-        color: var(--color-primary);
+        color: color(var(--color-primary) h(+0) s(85%) l(*1.27));
+        border-color: @color;
       }
 
       &:active {
         background: var(--color-base-white);
-        border-color: var(--color-dark-primary);
         color: var(--color-dark-primary);
+        border-color: @color;
         outline: none;
       }
     }
@@ -72,8 +70,7 @@
 
     @when disabled {
       &,
-      &:hover,
-      &:focus {
+      &:hover {
         color: var(--button-disabled-white-color);
         cursor: not-allowed;
         background-image: none;
@@ -88,8 +85,7 @@
 
       &.is-plain {
         &,
-        &:hover,
-        &:focus {
+        &:hover {
           background-color: var(--color-base-white);
           border-color: var(--button-disabled-border);
           color: @border-color;
@@ -110,7 +106,7 @@
         right: -1px;
         bottom: -1px;
         border-radius: inherit;
-        background-color: rgba(255,255,255,.35);
+        background-color: rgba(255, 255, 255, .35);
       }
     }
     @m primary {
@@ -144,12 +140,11 @@
       padding-left: 0;
       padding-right: 0;
 
-      &:hover,
-      &:focus {
-        color: tint(var(--color-primary), var(--button-hover-tint-percent));
+      &:hover {
+        color: color(var(--color-primary) h(+0) s(85%) l(*1.27));
       }
       &:active {
-        color: shade(var(--color-primary), var(--button-active-shade-percent));
+        color: var(--color-dark-primary);
       }
     }
   }
@@ -182,7 +177,6 @@
       }
 
       &:hover,
-      &:focus,
       &:active {
         z-index: 1;
       }

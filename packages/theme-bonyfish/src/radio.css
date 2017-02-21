@@ -138,7 +138,7 @@
       cursor: pointer;
       background: var(--button-default-fill);
       border: var(--border-base);
-      color: var(--button-default-color);
+      color: var(--button-plain-border);
       -webkit-appearance: none;
       text-align: center;
       box-sizing: border-box;
@@ -152,6 +152,8 @@
       @mixin button-size var(--button-padding-vertical), var(--button-padding-horizontal), var(--button-font-size), 0;
 
       &:hover {
+        background: var(--color-base-white);
+        border-color: var(--color-primary);
         color: var(--color-primary);
       }
 

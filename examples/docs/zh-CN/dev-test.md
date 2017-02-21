@@ -111,9 +111,9 @@
 
 ### 代码中依赖的项目
 
-https://github.com/noeldelgado/gemini-scrollbar
+[gemini-scrollbar](https://github.com/noeldelgado/gemini-scrollbar)
 
-https://github.com/sdecima/javascript-detect-element-resize
+[javascript-detect-element-resize](https://github.com/sdecima/javascript-detect-element-resize)
 
 ### 衍生工具
 

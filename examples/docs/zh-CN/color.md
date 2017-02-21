@@ -99,7 +99,7 @@
   }
 
   .bg-local-disabled-primary {
-    background-color: #c9dcf4;
+    background-color: #d4e9fd
   }
 
   .color-gray {
@@ -204,6 +204,6 @@ Element 主要品牌颜色是鲜艳、友好的蓝色。
 
 <el-row :gutter="12">
   <el-col :span="6">
-    <div class="demo-color-box color-gray bg-local-disabled-primary">Local Disabled Primary<div class="value">#c9dcf4</div></div>
+    <div class="demo-color-box color-gray bg-local-disabled-primary">Local Disabled Primary<div class="value">#d4e9fd</div></div>
   </el-col>
 </el-row>

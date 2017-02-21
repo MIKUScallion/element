@@ -40,7 +40,7 @@
 
   --color-dark-white: #f5f6f8;
 
-  --color-local-disabled-primary: #c9dcf4;
+  --color-local-disabled-primary: #d4e9fd;
 
   /* Link
   -------------------------- */
@@ -351,17 +351,19 @@
   --button-mini-padding-vertical: 4px;
   --button-mini-padding-horizontal: 4px;
 
-  --button-default-color: var(--color-black);
+  --button-default-color: var(--color-primary);
   --button-default-fill: var(--color-base-white);
-  --button-default-border: #c4c4c4;
+  --button-default-border: var(--color-primary);
+  --button-plain-border: var(--color-silver);
 
   --button-ghost-color: #666;
   --button-ghost-fill: transparent;
   --button-ghost-border: none;
 
-  --button-disabled-color: var(--color-extra-light-silver);
-  --button-disabled-fill: var(--color-extra-light-gray);
-  --button-disabled-border: var(--disabled-border-base);
+  --button-disabled-color: var(--color-silver);
+  --button-disabled-white-color: var(--color-base-white);
+  --button-disabled-fill: var(--color-local-disabled-primary);
+  --button-disabled-border: var(--color-local-disabled-primary);
 
   --button-primary-border: var(--color-primary);
   --button-primary-color: var(--color-base-white);

@@ -362,6 +362,7 @@
 
   --button-disabled-color: var(--color-silver);
   --button-disabled-white-color: var(--color-base-white);
+  --button-disabled-text-color: var(--color-extra-light-silver);
   --button-disabled-fill: var(--color-local-disabled-primary);
   --button-disabled-border: var(--color-local-disabled-primary);
 

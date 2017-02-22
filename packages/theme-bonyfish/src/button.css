@@ -79,7 +79,7 @@
       }
 
       &.el-button--text {
-        color: var(--button-disabled-color);
+        color: var(--button-disabled-text-color);
         background-color: transparent;
       }
 

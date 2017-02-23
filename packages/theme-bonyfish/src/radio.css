@@ -152,8 +152,8 @@
       @mixin button-size var(--button-padding-vertical), var(--button-padding-horizontal), var(--button-font-size), 0;
 
       &:hover {
-        background: var(--color-base-white);
-        color: var(--color-primary);
+        background: var(--button-default-fill);
+        color: var(--button-default-color);
       }
 
       & [class*="el-icon-"] {
@@ -182,11 +182,11 @@
 
       &:disabled {
         & + .el-radio-button__inner {
-          color: var(--color-extra-light-silver);
+          color: var(--radio-button-disabled-color);
           cursor: not-allowed;
           background-image: none;
-          background-color: var(--color-extra-light-gray);
-          border-color: var(--color-extra-light-silver);
+          background-color: var(--radio-button-disabled-fill);
+          border-color: var(--radio-button-disabled-border);
         }
       }
     }

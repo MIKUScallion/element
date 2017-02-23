@@ -121,7 +121,7 @@
   /* Radio
   -------------------------- */
   --radio-font-size: 14px;
-  --radio-color: var(--color-black);
+  --radio-color: var(--color-extra-light-black);
   --radio-input-height: 16px;
   --radio-input-width: 16px;
   --radio-input-border-radius: var(--border-radius-circle);
@@ -148,7 +148,9 @@
   --radio-button-checked-fill: var(--color-primary);
   --radio-button-checked-color: var(--color-base-white);
   --radio-button-checked-border-color: var(--color-primary);
-
+  --radio-button-disabled-color: var(--color-extra-light-silver);
+  --radio-button-disabled-fill: var(--color-extra-light-gray);
+  --radio-button-disabled-border: var(--color-extra-light-silver);
   /* Select
   -------------------------- */
   --select-border-color-hover: var(--border-color-hover);

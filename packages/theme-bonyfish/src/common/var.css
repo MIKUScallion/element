@@ -40,8 +40,6 @@
 
   --color-dark-white: #f5f6f8;
 
-  --color-local-disabled-primary: #d4e9fd;
-
   /* Link
   -------------------------- */
   --link-color: var(--color-extra-light-black);
@@ -333,6 +331,7 @@
 
   /* Button
   -------------------------- */
+  --button-border-base: var(--border-base);
   --button-font-size: 14px;
   --button-border-radius: var(--border-radius-small);
   --button-paddding: 5px 20px;
@@ -354,17 +353,17 @@
   --button-default-color: var(--color-primary);
   --button-default-fill: var(--color-base-white);
   --button-default-border: var(--color-primary);
-  --button-plain-border: var(--color-silver);
+  --button-default-hover: color(var(--color-primary) h(+0) s(85%) l(*1.27));
+  --button-default-active: var(--color-dark-primary);
+  --button-default-plain: var(--color-silver);
 
   --button-ghost-color: #666;
   --button-ghost-fill: transparent;
   --button-ghost-border: none;
 
-  --button-disabled-color: var(--color-silver);
-  --button-disabled-white-color: var(--color-base-white);
-  --button-disabled-text-color: var(--color-extra-light-silver);
-  --button-disabled-fill: var(--color-local-disabled-primary);
-  --button-disabled-border: var(--color-local-disabled-primary);
+  --button-disabled: color(var(--color-light-primary) h(+8) s(91%) l(91%));
+  --button-filled-disabled-color: var(--color-base-white);
+  --button-text-disabled-color: var(--color-extra-light-silver);
 
   --button-primary-border: var(--color-primary);
   --button-primary-color: var(--color-base-white);

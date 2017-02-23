@@ -9,7 +9,7 @@
     white-space: nowrap;
     cursor: pointer;
     background: var(--button-default-fill);
-    border: var(--border-base);
+    border: var(--button-border-base);
     border-color: var(--button-default-border);
     color: var(--button-default-color);
     -webkit-appearance: none;
@@ -25,13 +25,13 @@
     @mixin button-size var(--button-padding-vertical), var(--button-padding-horizontal), var(--button-font-size), var(--button-border-radius);
 
     &:hover {
-      color: color(var(--color-primary) h(+0) s(85%) l(*1.27));
-      border-color: @color;
+      color: var(--button-default-hover);
+      border-color: var(--button-default-hover);
     }
 
     &:active {
-      color: var(--color-dark-primary);
-      border-color: @color;
+      color: var(--button-default-active);
+      border-color: var(--button-default-active);
       outline: none;
     }
 
@@ -46,49 +46,49 @@
     }
 
     @when plain {
-      color: var(--button-plain-border);
-      border-color: @color;
+      color: var(--button-default-plain);
+      border-color: var(--button-default-plain);
 
       &:hover {
-        background: var(--color-base-white);
-        color: color(var(--color-primary) h(+0) s(85%) l(*1.27));
-        border-color: @color;
+        background: var(--button-default-fill);
+        color: var(--button-default-hover);
+        border-color: var(--button-default-hover);
       }
 
       &:active {
-        background: var(--color-base-white);
-        color: var(--color-dark-primary);
-        border-color: @color;
+        background: var(--button-default-fill);
+        color: var(--button-default-active);
+        border-color: var(--button-default-active);
         outline: none;
       }
     }
 
     @when active {
-      color: var(--color-dark-primary);
-      border-color: @color;
+      color: var(--button-default-active);
+      border-color: var(--button-default-active);
     }
 
     @when disabled {
       &,
       &:hover {
-        color: var(--button-disabled-white-color);
         cursor: not-allowed;
         background-image: none;
-        background-color: var(--button-disabled-fill);
-        border-color: var(--button-disabled-border);
+        background-color: var(--button-default-fill);
+        border-color: var(--button-disabled);
+        color: var(--button-disabled);
       }
 
       &.el-button--text {
-        color: var(--button-disabled-text-color);
+        color: var(--button-text-disabled-color);
         background-color: transparent;
       }
 
       &.is-plain {
         &,
         &:hover {
-          background-color: var(--color-base-white);
-          border-color: var(--button-disabled-border);
-          color: @border-color;
+          background-color: var(--button-default-fill);
+          border-color: var(--button-disabled);
+          color: var(--button-disabled);
         }
       }
     }
@@ -106,7 +106,7 @@
         right: -1px;
         bottom: -1px;
         border-radius: inherit;
-        background-color: rgba(255, 255, 255, .35);
+        background-color: color(var(--button-default-fill) a(35%));
       }
     }
     @m primary {
@@ -135,16 +135,16 @@
     }
     @m text {
       border: none;
-      color: var(--color-primary);
+      color: var(--button-default-color);
       background: transparent;
       padding-left: 0;
       padding-right: 0;
 
       &:hover {
-        color: color(var(--color-primary) h(+0) s(85%) l(*1.27));
+        color: var(--button-default-hover);
       }
       &:active {
-        color: var(--color-dark-primary);
+        color: var(--button-default-active);
       }
     }
   }

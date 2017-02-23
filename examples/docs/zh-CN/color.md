@@ -98,10 +98,6 @@
     background-color: #f5f6f8;
   }
 
-  .bg-local-disabled-primary {
-    background-color: #d4e9fd
-  }
-
   .color-gray {
     color: #5e6d82;
   }
@@ -195,15 +191,5 @@ Element 主要品牌颜色是鲜艳、友好的蓝色。
 <el-row :gutter="12">
   <el-col :span="6">
     <div class="demo-color-box color-gray bg-dark-white" style="border: 1px solid rgb(224, 230, 237);">Dark White<div class="value">#f5f6f8</div></div>
-  </el-col>
-</el-row>
-
-### 特殊颜色
-
-为了满足特殊需求的颜色
-
-<el-row :gutter="12">
-  <el-col :span="6">
-    <div class="demo-color-box color-gray bg-local-disabled-primary">Local Disabled Primary<div class="value">#d4e9fd</div></div>
   </el-col>
 </el-row>

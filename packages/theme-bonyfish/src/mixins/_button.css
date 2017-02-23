@@ -25,21 +25,26 @@
   &.is-plain {
     background: var(--button-default-fill);
     border: var(--border-base);
-    border-color: var(--button-plain-border);
-    color: @border-color;
+    border-color: var(--button-default-plain);
+    color: var(--button-default-plain);
 
     &:hover {
-      background: var(--color-base-white);
+      background: var(--button-default-fill);
       border-color: color($border-color h(+0) s(85%) l(*1.27));
       color: color($background-color h(+0) s(85%) l(*1.27));
     }
 
     &:active {
-      background: var(--color-base-white);
+      background: var(--button-default-fill);
       border-color: color($border-color h(+0) s(99%) l(*0.9));
       color: color($background-color h(+0) s(99%) l(*0.9));
       outline: none;
     }
+  }
+
+  &.is-disabled {
+    color: var(--button-filled-disabled-color) !important;
+    background-color: var(--button-disabled) !important;
   }
 }
 

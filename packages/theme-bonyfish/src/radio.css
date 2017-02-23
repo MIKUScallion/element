@@ -138,7 +138,7 @@
       cursor: pointer;
       background: var(--button-default-fill);
       border: var(--border-base);
-      color: var(--button-plain-border);
+      color: var(--button-default-plain);
       -webkit-appearance: none;
       text-align: center;
       box-sizing: border-box;

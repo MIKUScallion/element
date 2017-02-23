@@ -3,7 +3,8 @@
     :class="[
       size ? 'el-input-number--' + size : '',
       { 'is-disabled': disabled },
-      { 'is-without-controls': !controls}
+      { 'is-without-controls': !controls},
+      { 'el-input-number--both-side': bothSide }
     ]"
   >
     <span
@@ -37,7 +38,7 @@
         </template>
         <template slot="append" v-if="$slots.append">
           <slot name="append"></slot>
-        </template> 
+        </template>
     </el-input>
   </div>
 </template>
@@ -73,6 +74,10 @@
       ElInput
     },
     props: {
+      bothSide: {
+        type: Boolean,
+        default: false
+      },
       step: {
         type: Number,
         default: 1

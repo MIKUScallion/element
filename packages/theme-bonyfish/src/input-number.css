@@ -108,5 +108,15 @@
         padding-right: 10px;
       }
     }
+    @m both-side {
+      & .el-input-number__decrease {
+        left: 0;
+        border-right: var(--border-base);
+      }
+      & .el-input__inner {
+        padding-right: calc(var(--input-height) + 10);
+        padding-left: calc(var(--input-height) + 10);
+      }
+    }
   }
 }

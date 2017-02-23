@@ -34,7 +34,11 @@
 :::demo 要使用它，只需要在`el-input-number`元素中使用`v-model`绑定变量即可，变量的初始值即为默认值。
 ```html
 <template>
-  <el-input-number v-model="num1" @change="handleChange" :min="1" :max="10"></el-input-number>
+  <div style="margin-bottom: 10px;">
+    <el-input-number v-model="num1" @change="handleChange" :min="1" :max="10"></el-input-number>
+  </div>
+
+  <el-input-number :both-side="true" v-model="num1" @change="handleChange" :min="1" :max="10"></el-input-number>
 </template>
 <script>
   export default {
@@ -131,6 +135,7 @@
 | size     | 计数器尺寸           | string   | large, small | — |
 | disabled | 是否禁用计数器        | boolean | — | false |
 | controls | 是否使用控制按钮        | boolean | — | true |
+| both-side | 是否把控制按钮放置在两边        | boolean | — | false |
 
 ### Events
 | 事件名称 | 说明 | 回调参数 |

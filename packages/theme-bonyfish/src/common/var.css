@@ -87,7 +87,7 @@
   -------------------------- */
   /*--disabled-fill-base: var(--color-extra-light-gray);*/
   --disabled-fill-base: var(--color-base-white);
-  --disabled-color-base: #bbb;
+  --disabled-color-base: var(--color-extra-light-silver);
   --disabled-border-base: var(--color-extra-light-silver);
 
   /* Icon

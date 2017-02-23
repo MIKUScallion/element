@@ -153,7 +153,6 @@
 
       &:hover {
         background: var(--color-base-white);
-        border-color: var(--color-primary);
         color: var(--color-primary);
       }
 
@@ -183,11 +182,11 @@
 
       &:disabled {
         & + .el-radio-button__inner {
-          color: var(--button-disabled-color);
+          color: var(--color-extra-light-silver);
           cursor: not-allowed;
           background-image: none;
-          background-color: var(--button-disabled-fill);
-          border-color: var(--button-disabled-border);
+          background-color: var(--color-extra-light-gray);
+          border-color: var(--color-extra-light-silver);
         }
       }
     }

@@ -83,6 +83,9 @@
 
           &:hover {
             background-color: var(--color-base-white);
+            &:before {
+              display: none;
+            }
           }
         }
 

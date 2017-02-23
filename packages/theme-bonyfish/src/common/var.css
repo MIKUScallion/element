@@ -95,7 +95,7 @@
   /* Checkbox
   -------------------------- */
   --checkbox-font-size: 14px;
-  --checkbox-color: var(--color-black);
+  --checkbox-color: var(--color-extra-light-black);
   --checkbox-input-height: 16px;
   --checkbox-input-width: 16px;
   --checkbox-input-border-radius: var(--border-radius-small);

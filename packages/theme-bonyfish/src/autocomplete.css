@@ -47,17 +47,17 @@
           background-color: var(--select-option-hover-bar);
         }
         &:hover {
-          background-color: var(--select-option-hover-background);
+          background-color: var(--select-option-hover-fill);
           &:before {
             display: block;
           }
         }
         &.highlighted, &:active {
           color: var(--color-base-white);
-          background-color: var(--select-option-selected-background);
+          background-color: var(--select-option-selected-fill);
 
           &:hover {
-            background-color: var(--select-option-selected-hover);
+            background-color: var(--select-option-selected-hover-fill);
           }
           &:before {
             display: none;

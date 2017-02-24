@@ -37,7 +37,7 @@
       }
 
       &.hover {
-        background-color: var(--select-option-hover-background);
+        background-color: var(--select-option-hover-fill);
 
         &:before {
           display: block;
@@ -46,10 +46,10 @@
 
       &.selected {
         color: var(--color-base-white);
-        background-color: var(--select-option-selected-background);
+        background-color: var(--select-option-selected-fill);
 
         &:hover {
-          background-color: var(--select-option-selected-hover);
+          background-color: var(--select-option-selected-hover-fill);
         }
         &:before {
           display: none;

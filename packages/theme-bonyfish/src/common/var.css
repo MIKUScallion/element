@@ -170,11 +170,11 @@
   --select-option-color: var(--link-color);
   --select-option-disabled-color: var(--color-extra-light-silver);
   --select-option-height: 30px;
-  --select-option-hover-background: color(var(--color-light-primary) a(10%));
+  --select-option-hover-fill: color(var(--color-light-primary) a(10%));
   --select-option-hover-bar: var(--color-light-primary);
   --select-option-selected: var(--color-primary);
-  --select-option-selected-background: var(--color-primary);
-  --select-option-selected-hover: var(--color-dark-primary);
+  --select-option-selected-fill: var(--color-primary);
+  --select-option-selected-hover-fill: var(--color-dark-primary);
 
   --select-group-color: #999;
   --select-group-height: 30px;

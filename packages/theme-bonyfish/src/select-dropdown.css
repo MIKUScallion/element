@@ -19,7 +19,7 @@
         background-color: var(--select-dropdown-background);
 
         &.hover {
-          background-color: var(--select-option-hover-background);
+          background-color: var(--select-option-hover-fill);
           &:before {
             display: block;
           }

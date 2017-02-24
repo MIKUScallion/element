@@ -398,9 +398,9 @@
   /* Switch
  -------------------------- */
   --switch-on-color: var(--color-primary);
-  --switch-off-color: var(--color-extra-light-silver);
-  --switch-disabled-color: var(--color-light-gray);
-  --switch-disabled-text-color: var(--color-dark-white);
+  --switch-off-color: var(--color-light-silver);
+  --switch-disabled-color: var(--color-extra-light-silver);
+  --switch-disabled-text-color: var(--color-base-white);
 
   --switch-font-size: var(--font-size-base);
   --switch-core-border-radius: 12px;

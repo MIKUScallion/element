@@ -11,7 +11,7 @@
       :controls="showInputControls"
       :min="min"
       :max="max"
-      size="small">
+      >
     </el-input-number>
     <div class="el-slider__runway"
       :class="{ 'show-input': showInput, 'disabled': disabled }"

@@ -512,8 +512,8 @@
   --------------------------*/
   --slider-main-background-color: var(--color-primary);
   --slider-runway-background-color: var(--color-light-gray);
-  --slider-button-hover-color: shade(var(--color-primary), 0.12);
-  --slider-stop-background-color: var(--color-extra-light-silver);
+  --slider-button-hover-color: color(var(--color-primary) h(+0) s(85%) l(*1.27));
+  --slider-stop-background-color: color(var(--color-extra-light-gray) h(+2) s(-22) l(-8));
   --slider-disable-color: var(--color-extra-light-silver);
 
   --slider-margin: 16px 0;

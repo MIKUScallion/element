@@ -151,6 +151,16 @@ export default {
       required: true
     },
     border: Boolean,
+    abledSortOrders: {
+      type: Array,
+      default() {
+        return [
+          'normal',
+          'ascending',
+          'descending'
+        ];
+      }
+    },
     defaultSort: {
       type: Object,
       default() {
@@ -198,6 +208,11 @@ export default {
       const states = this.store.states;
       states.sortProp = this.defaultSort.prop;
       states.sortOrder = this.defaultSort.order || 'ascending';
+      states.sortOrder = this.outputOrder(this.indexOrder(states.sortOrder));
+      if (this.abledSortOrders.indexOf(states.sortOrder) === -1) {
+        console.error('defaultSort conflict with abledSortOrders');
+        return;
+      }
       this.$nextTick(_ => {
         for (let i = 0, length = this.columns.length; i < length; i++) {
           let column = this.columns[i];
@@ -212,6 +227,11 @@ export default {
           this.store.commit('changeSortCondition');
         }
       });
+    } else {
+      if (this.abledSortOrders.indexOf('normal') === -1) {
+        console.error('normal must be in abledSortOrders when not a defaultSort');
+        return;
+      }
     }
   },
 
@@ -374,7 +394,28 @@ export default {
     },
 
     toggleOrder(order) {
-      return !order ? 'ascending' : order === 'ascending' ? 'descending' : null;
+      let index = this.indexOrder(order);
+      index++;
+      return this.outputOrder(index);
+    },
+
+    indexOrder(order) {
+      let temp = '';
+      if (!order) {
+        temp = 'normal';
+      } else {
+        temp = order;
+      }
+      let index = this.abledSortOrders.indexOf(temp);
+      index = index === -1 ? 0 : index;
+      return index;
+    },
+
+    outputOrder(index) {
+      index = index >= this.abledSortOrders.length ? 0 : index;
+      let order = this.abledSortOrders[index];
+      order = order === 'normal' ? null : order;
+      return order;
     },
 
     handleSortClick(event, column) {

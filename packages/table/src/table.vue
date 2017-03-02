@@ -16,6 +16,7 @@
         :layout="layout"
         :border="border"
         :default-sort="defaultSort"
+        :abled-sort-orders="abledSortOrders"
         :style="{ width: layout.bodyWidth ? layout.bodyWidth + 'px' : '' }">
       </table-header>
     </div>
@@ -169,7 +170,8 @@
 
       defaultExpandAll: Boolean,
 
-      defaultSort: Object
+      defaultSort: Object,
+      abledSortOrders: Array
     },
 
     components: {

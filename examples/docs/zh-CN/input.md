@@ -180,6 +180,18 @@
       }
     }
   }
+
+  .test-password-input .el-icon-eye.svg:hover > span {
+    @svg-load eye-hover url(../../../packages/theme-bonyfish/src/fonts/el-icon-eye.svg) {
+      fill: #2981d4;
+    }
+    background-image: svg-inline(eye-hover);
+  }
+
+  .test-password-input .el-icon-eye.svg:hover + .el-input__inner {
+    border-color: #2981d4;
+  }
+
 </style>
 
 ## Input 输入框
@@ -233,12 +245,57 @@ export default {
 
 ::: demo 可以通过 `icon` 属性在 input 组件尾部增加显示图标，可以通过 `on-icon-click` 钩子函数来在点击图标后执行需要的逻辑。
 ```html
-<el-input
-  placeholder="请选择日期"
-  icon="search"
-  v-model="input2"
-  :on-icon-click="handleIconClick">
-</el-input>
+<div style="margin-bottom:10px;">
+  <el-input
+    placeholder="请选择日期"
+    icon="search"
+    v-model="input2"
+   >
+  </el-input>
+</div>
+
+<div style="margin-bottom:10px;">
+  <el-input
+    placeholder="请选择日期"
+    v-model="input2"
+    >
+    <i slot="icon" class="el-input__icon el-icon-eye svg"><span></span></i>
+  </el-input>
+</div>
+
+<div style="margin-bottom:10px;">
+  <el-input
+    placeholder="请选择日期"
+    icon="search"
+    v-model="input2"
+    :on-icon-click="handleIconClick"
+   >
+  </el-input>
+</div>
+
+<div style="margin-bottom:10px;">
+  <el-input
+    placeholder="请选择日期"
+    v-model="input2"
+    class="test-password-input"
+    >
+    <i @click="handleIconClick" slot="icon" class="el-input__icon el-icon-eye svg"><span></span></i>
+  </el-input>
+</div>
+
+<style>
+  /* 指定自定义 SVG 图标，并获得与原始字体图标相同的效果 */
+  .test-password-input .el-icon-eye.svg:hover > span {
+    @svg-load eye-hover url(../../../packages/theme-bonyfish/src/fonts/el-icon-eye.svg) {
+      fill: #2981d4;
+    }
+    background-image: svg-inline(eye-hover);
+  }
+
+  .test-password-input .el-icon-eye.svg:hover + .el-input__inner {
+    border-color: #2981d4;
+  }
+</style>
 
 <script>
 export default {

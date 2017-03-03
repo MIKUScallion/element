@@ -17,7 +17,7 @@
     font-size: 1.5em;
     vertical-align: middle;
   }
-  
+
   .demo-icon .source > button {
     margin: 0 20px;
   }
@@ -82,13 +82,26 @@
 ```
 :::
 
-### 图标集合
+### 字体图标
 
 <ul class="icon-list">
   <li v-for="name in icons">
     <span>
       <i :class="'el-icon-' + name"></i>
       {{'el-icon-' + name}}
+    </span>
+  </li>
+</ul>
+
+### SVG 图标
+
+SVG 图标不同于字体图标，暂时只能独立使用......
+
+<ul class="icon-list">
+  <li>
+    <span>
+      <i class="el-icon-eye svg"><span></span></i>
+      {{ 'el-icon-eye.svg' }}
     </span>
   </li>
 </ul>

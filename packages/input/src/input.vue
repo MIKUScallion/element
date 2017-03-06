@@ -26,6 +26,15 @@
           @click="handleIconClick">
         </i>
       </slot>
+      <!-- 清除 图标 -->
+      <i class="el-input__icon"
+        :class="[
+          'el-icon-circle-cross',
+          'is-clickable'
+        ]"
+        v-if="clearable && currentValue"
+        @click="handleClearIconClick">
+      </i>
       <input
         v-if="type !== 'textarea'"
         class="el-input__inner"
@@ -100,6 +109,7 @@
       readonly: Boolean,
       autofocus: Boolean,
       icon: String,
+      clearable: Boolean,
       disabled: Boolean,
       type: {
         type: String,
@@ -175,6 +185,9 @@
           this.onIconClick(event);
         }
         this.$emit('click', event);
+      },
+      handleClearIconClick(event) {
+        this.setCurrentValue('');
       },
       setCurrentValue(value) {
         if (value === this.currentValue) return;

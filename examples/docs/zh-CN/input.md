@@ -34,7 +34,9 @@
         state1: '',
         state2: '',
         state3: '',
-        state4: ''
+        state4: '',
+        password: '',
+        passwordType: 'password'
       };
     },
     methods: {
@@ -115,6 +117,10 @@
       },
       handleIconClick(ev) {
         console.log(ev);
+      },
+      handleEyeIconClick() {
+        const temp = this.passwordType
+        this.passwordType = temp === 'password' ? 'text' : 'password'
       }
     },
     mounted() {
@@ -188,10 +194,6 @@
     background-image: svg-inline(eye-hover);
   }
 
-  .test-password-input .el-icon-eye.svg:hover + .el-input__inner {
-    border-color: #2981d4;
-  }
-
 </style>
 
 ## Input 输入框
@@ -259,7 +261,7 @@ export default {
     placeholder="请选择日期"
     v-model="input2"
     >
-    <i slot="icon" class="el-input__icon el-icon-eye svg"><span></span></i>
+    <i slot="icon" class="el-input__icon el-icon-eye svg is-clickable"><span></span></i>
   </el-input>
 </div>
 
@@ -279,7 +281,7 @@ export default {
     v-model="input2"
     class="test-password-input"
     >
-    <i @click="handleIconClick" slot="icon" class="el-input__icon el-icon-eye svg"><span></span></i>
+    <i @click="handleIconClick" slot="icon" class="el-input__icon el-icon-eye svg is-clickable"><span></span></i>
   </el-input>
 </div>
 
@@ -290,10 +292,6 @@ export default {
       fill: #2981d4;
     }
     background-image: svg-inline(eye-hover);
-  }
-
-  .test-password-input .el-icon-eye.svg:hover + .el-input__inner {
-    border-color: #2981d4;
   }
 </style>
 
@@ -314,6 +312,53 @@ export default {
 ```
 :::
 
+### 密码输入框
+
+带 **小眼睛** 和 **清除** 图标的密码输入框
+
+::: demo
+```html
+<div>
+  <el-input
+    placeholder="请输入密码"
+    v-model="password"
+    class="test-password-input"
+    clearable
+    :type="passwordType"
+    >
+    <i @click="handleEyeIconClick" slot="icon" class="el-input__icon el-icon-eye svg is-clickable"><span></span></i>
+  </el-input>
+</div>
+
+<style>
+  /* 指定自定义 SVG 图标，并获得与原始字体图标相同的效果 */
+  .test-password-input .el-icon-eye.svg:hover > span {
+    @svg-load eye-hover url(../../../packages/theme-bonyfish/src/fonts/el-icon-eye.svg) {
+      fill: #2981d4;
+    }
+    background-image: svg-inline(eye-hover);
+  }
+</style>
+
+<script>
+export default {
+  data() {
+    return {
+      password: '',
+      passwordType: 'password'
+    }
+  },
+  methods: {
+    handleEyeIconClick() {
+      const temp = this.passwordType
+      this.passwordType = temp === 'password' ? 'text' : 'password'
+    }
+  }
+}
+</script>
+```
+:::
+
 ### 文本域
 
 用于输入多行文本信息，通过将 `type` 属性的值指定为 textarea。
@@ -322,6 +367,7 @@ export default {
 ```html
 <el-input
   type="textarea"
+  clearable
   :rows="5"
   placeholder="请输入内容"
   v-model="textarea">
@@ -829,7 +875,7 @@ export default {
 | autofocus | 原生属性，自动获取焦点 | boolean | true, false | false |
 | form | 原生属性 | string | — | — |
 | on-icon-click | 点击 Input 内的图标的钩子函数 | function | — | — |
-
+| clearable | 点击 Input 内的清除图标，可快速清除内容 | boolean | — | — |
 ### Input Events
 | 事件名称 | 说明 | 回调参数 |
 |---------|--------|---------|

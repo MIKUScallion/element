@@ -58,8 +58,15 @@
         vertical-align: middle;
       }
 
+      & + & {
+        right: 35px;
+      }
+
       & + .el-input__inner {
         padding-right: 35px;
+      }
+      & + & + .el-input__inner {
+        padding-right: 70px;
       }
 
       @when clickable {
@@ -67,7 +74,7 @@
           cursor: pointer;
           color: var(--input-hover-border);
 
-          & + .el-input__inner {
+          & ~ .el-input__inner {
             border-color: var(--input-hover-border);
           }
         }

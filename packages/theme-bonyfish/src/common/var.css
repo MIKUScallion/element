@@ -149,7 +149,7 @@
   --radio-button-checked-color: var(--color-base-white);
   --radio-button-checked-border-color: var(--color-primary);
   --radio-button-disabled-color: var(--color-extra-light-silver);
-  --radio-button-disabled-fill: var(--color-extra-light-gray);
+  --radio-button-disabled-fill: var(--color-base-white);
   --radio-button-disabled-border: var(--color-extra-light-silver);
   /* Select
   -------------------------- */

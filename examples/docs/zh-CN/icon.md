@@ -104,4 +104,10 @@ SVG 图标不同于字体图标，暂时只能独立使用......
       {{ 'el-icon-eye.svg' }}
     </span>
   </li>
+  <li>
+    <span>
+      <i class="el-icon-clock svg"><span></span></i>
+      {{ 'el-icon-clock.svg' }}
+    </span>
+  </li>
 </ul>

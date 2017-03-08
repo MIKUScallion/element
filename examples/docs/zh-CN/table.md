@@ -206,6 +206,10 @@
 
       deleteRow(index, rows) {
         rows.splice(index, 1);
+      },
+
+      onSortChange (ev) {
+        console.log(ev)
       }
     },
 
@@ -228,6 +232,24 @@
 
   .demo-table .name-wrapper {
     display: inline-block;
+  }
+
+  .el-table .sort-icon {
+    font-size: 12px;
+    position: absolute;
+    color: #b6bbc3;
+  }
+  .el-table .sort-icon.ascending {
+    top: 7px;
+  }
+  .el-table .sort-icon.descending {
+    bottom: 5px;
+  }
+  .el-table .ascending .sort-icon.ascending {
+    color: #48556a;
+  }
+  .el-table .descending .sort-icon.descending {
+    color: #48556a;
   }
 </style>
 
@@ -1139,7 +1161,7 @@
 
 对表格进行排序，可快速查找或对比数据。
 
-:::demo 可以通过表的`default-sort`属性设置默认的排序列和排序顺序。在列中设置`sortable`属性即可实现以该列为基准的排序，接受一个`Boolean`，默认为`false`。在本例中，我们还使用了`formatter`属性，它用于格式化指定列的值，接受一个`Function`，会传入两个参数：`row`和`column`，可以根据自己的需求进行处理。`abled-sort-orders`属性指定可用的排序状态`['normal', 'ascending', 'descending']`。
+:::demo 可以通过表的`default-sort`属性设置默认的排序列和排序顺序。在列中设置`sortable`属性即可实现以该列为基准的排序，接受一个`Boolean`，默认为`false`。在本例中，我们还使用了`formatter`属性，它用于格式化指定列的值，接受一个`Function`，会传入两个参数：`row`和`column`，可以根据自己的需求进行处理。`abled-sort-orders`属性指定可用的排序状态`['normal', 'ascending', 'descending']`。还可使用`el-table`的`slot="caret"`这个插槽来自定义排序的图标。
 ```html
 <template>
   <el-table
@@ -1150,6 +1172,10 @@
     :abled-sort-orders = "['ascending', 'descending']"
     @sort-change = "onSortChange"
     >
+    <template slot="caret">
+      <i class="sort-icon ascending el-icon-arrow-up"></i>
+      <i class="sort-icon descending el-icon-arrow-down"></i>
+    </template>
     <el-table-column
       prop="date"
       label="日期"
@@ -1200,6 +1226,26 @@
     }
   }
 </script>
+
+<style>
+  .el-table .sort-icon {
+    font-size: 12px;
+    position: absolute;
+    color: #b6bbc3;
+  }
+  .el-table .sort-icon.ascending {
+    top: 7px;
+  }
+  .el-table .sort-icon.descending {
+    bottom: 5px;
+  }
+  .el-table .ascending .sort-icon.ascending {
+    color: #48556a;
+  }
+  .el-table .descending .sort-icon.descending {
+    color: #48556a;
+  }
+</style>
 ```
 :::
 

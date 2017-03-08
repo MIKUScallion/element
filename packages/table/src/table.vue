@@ -18,6 +18,9 @@
         :default-sort="defaultSort"
         :abled-sort-orders="abledSortOrders"
         :style="{ width: layout.bodyWidth ? layout.bodyWidth + 'px' : '' }">
+        <template slot="caret">
+          <slot name="caret"></slot>
+        </template>
       </table-header>
     </div>
     <div
@@ -49,7 +52,11 @@
           :border="border"
           :store="store"
           :layout="layout"
-          :style="{ width: layout.fixedWidth ? layout.fixedWidth + 'px' : '' }"></table-header>
+          :style="{ width: layout.fixedWidth ? layout.fixedWidth + 'px' : '' }">
+          <template slot="caret">
+            <slot name="caret"></slot>
+          </template>
+         </table-header>
       </div>
       <div class="el-table__fixed-body-wrapper" ref="fixedBodyWrapper"
         :style="[
@@ -80,7 +87,11 @@
           :border="border"
           :store="store"
           :layout="layout"
-          :style="{ width: layout.rightFixedWidth ? layout.rightFixedWidth + 'px' : '' }"></table-header>
+          :style="{ width: layout.rightFixedWidth ? layout.rightFixedWidth + 'px' : '' }">
+          <template slot="caret">
+            <slot name="caret"></slot>
+          </template>
+         </table-header>
       </div>
       <div class="el-table__fixed-body-wrapper" ref="rightFixedBodyWrapper"
         :style="[

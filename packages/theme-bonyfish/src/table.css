@@ -139,6 +139,10 @@
       }
     }
 
+    & th.is-sortable {
+      cursor: pointer;
+    }
+
     & th.is-leaf, td {
       border-bottom: 1px solid var(--table-border-color);
     }

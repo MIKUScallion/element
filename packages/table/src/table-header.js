@@ -71,6 +71,10 @@ export default {
   render(h) {
     const originColumns = this.store.states.originColumns;
     const columnRows = convertToRows(originColumns, this.columns);
+    let caretContentEl = null;
+    if (this.$slots.caret.length !== 0) {
+      caretContentEl = h('span', this.$slots.caret);
+    }
 
     return (
       <table
@@ -105,7 +109,7 @@ export default {
                     on-mouseout={ this.handleMouseOut }
                     on-mousedown={ ($event) => this.handleMouseDown($event, column) }
                     on-click={ ($event) => this.handleHeaderClick($event, column) }
-                    class={ [column.id, column.order, column.headerAlign, column.className || '', rowIndex === 0 && this.isCellHidden(cellIndex) ? 'is-hidden' : '', !column.children ? 'is-leaf' : ''] }>
+                    class={ [column.id, column.order, column.sortable ? 'is-sortable' : '', column.headerAlign, column.className || '', rowIndex === 0 && this.isCellHidden(cellIndex) ? 'is-hidden' : '', !column.children ? 'is-leaf' : ''] }>
                     <div class={ ['cell', column.filteredValue && column.filteredValue.length > 0 ? 'highlight' : ''] }>
                     {
                       column.renderHeader
@@ -113,10 +117,17 @@ export default {
                         : column.label
                     }
                     {
-                      column.sortable
+                      column.sortable && !caretContentEl
                         ? <span class="caret-wrapper" on-click={ ($event) => this.handleSortClick($event, column) }>
                             <i class="sort-caret ascending"></i>
                             <i class="sort-caret descending"></i>
+                          </span>
+                        : ''
+                    }
+                    {
+                      column.sortable && caretContentEl
+                        ? <span class="caret-wrapper" on-click={ ($event) => this.handleSortClick($event, column) }>
+                            { caretContentEl }
                           </span>
                         : ''
                     }

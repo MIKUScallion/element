@@ -423,8 +423,8 @@
   /* Table
  -------------------------- */
   --table-border-color: color(var(--border-color-base) h(-3) s(27%) l(90%));
-  --table-text-color: var(--color-black);
-  --table-header-background: var(--color-extra-light-gray);
+  --table-text-color: var(--color-extra-light-black);
+  --table-header-background: color(var(--color-light-gray) h(-4) s(100%) l(99%));
 
   /* Pagination
  -------------------------- */

@@ -12,7 +12,6 @@
     width: 100%;
     max-width: 100%;
     background-color: var(--color-base-white);
-    border: 1px solid var(--table-border-color);
     font-size: 14px;
     color: var(--table-text-color);
 
@@ -25,6 +24,7 @@
       height: 1px;
       background-color: var(--table-border-color);
       z-index: 1;
+      display: none;
     }
 
     &::after {
@@ -36,6 +36,7 @@
       height: 100%;
       background-color: var(--table-border-color);
       z-index: 1;
+      display: none;
     }
 
     .el-tooltip {
@@ -105,8 +106,10 @@
     }
 
     @modifier fit {
-      border-right: 0;
-      border-bottom: 0;
+      &.el-table--border {
+        border-right: 0;
+        border-bottom: 0;
+      }
 
       & th.gutter, td.gutter {
         border-right-width: 1px;
@@ -114,12 +117,16 @@
     }
 
     & th {
+      height: 44px;
       white-space: nowrap;
       overflow: hidden;
     }
 
+    td {
+      height: 48px;
+    }
+
     & th, td {
-      height: 40px;
       min-width: 0;
       box-sizing: border-box;
       text-overflow: ellipsis;
@@ -143,11 +150,27 @@
       cursor: pointer;
     }
 
-    & th.is-leaf, td {
+    & th.is-leaf {
       border-bottom: 1px solid var(--table-border-color);
     }
 
     @modifier border {
+      border: 1px solid var(--table-border-color);
+      &::before {
+        display: block;
+      }
+      &::after {
+        display: block;
+      }
+    }
+
+    @modifier row-border {
+      td {
+        border-bottom: 1px solid var(--table-border-color);
+      }
+    }
+
+    @modifier col-border {
       & th, td {
         border-right: 1px solid var(--table-border-color);
       }
@@ -372,11 +395,11 @@
       & .el-table__body {
         & tr:nth-child(2n) {
           td {
-            background: #FAFAFA;
+            background: var(--color-dark-white);
           }
 
           &.current-row td {
-            background: color(var(--color-primary) tint(92%));
+            background: color(var(--color-light-gray) s(65%) l(91%));
           }
         }
       }
@@ -384,11 +407,11 @@
 
     @e body {
       tr.hover-row > td {
-        background-color: var(--color-extra-light-gray);
+        background-color: var(--color-light-gray);
       }
 
       tr.current-row > td {
-        background: color(var(--color-primary) tint(92%));
+        background: color(var(--color-light-gray) s(65%) l(91%));
       }
     }
 
@@ -427,7 +450,7 @@
 
     @modifier enable-row-hover {
       tr:hover > td {
-        background-color: var(--color-extra-light-gray);
+        background-color: var(--color-light-gray);
       }
     }
 

@@ -198,8 +198,6 @@
       tableRowClassName(row, index) {
         if (index === 1) {
           return 'info-row';
-        } else if (index === 3) {
-          return 'positive-row';
         }
         return '';
       },
@@ -222,12 +220,9 @@
 </script>
 
 <style>
-  .el-table .info-row {
-    background: #c9e5f5;
-  }
-
-  .el-table .positive-row {
-    background: #e2f0e4;
+  .el-table .info-row, .el-table .info-row:hover > td {
+    background: #2a92f4;
+    color: white;
   }
 
   .demo-table .name-wrapper {
@@ -370,12 +365,14 @@
 
 ### 带边框表格
 
-:::demo 默认情况下，Table 组件是不具有竖直方向的边框的，如果需要，可以使用`border`属性，它接受一个`Boolean`，设置为`true`即可启用。
+#### 竖向边框
+
+:::demo 默认情况下，Table 组件是不具有竖直方向的边框的，如果需要，可以使用`col-border`属性，它接受一个`Boolean`，设置为`true`即可启用。
 ```html
 <template>
   <el-table
     :data="tableData"
-    border
+    col-border
     style="width: 100%">
     <el-table-column
       prop="date"
@@ -422,11 +419,64 @@
 ```
 :::
 
-### 带状态表格
+#### 去除横向边框和外围边框
 
-可将表格内容 highlight 显示，方便区分「成功、信息、警告、危险」等内容。
+:::demo 默认情况下，Table 组件是具有横向边框和外围边框的，可以指定`row-border`和`border`属性为`false`去除。
+```html
+<template>
+  <el-table
+    :data="tableData"
+    :border="false"
+    :row-border="false"
+    style="width: 100%">
+    <el-table-column
+      prop="date"
+      label="日期"
+      width="180">
+    </el-table-column>
+    <el-table-column
+      prop="name"
+      label="姓名"
+      width="180">
+    </el-table-column>
+    <el-table-column
+      prop="address"
+      label="地址">
+    </el-table-column>
+  </el-table>
+</template>
 
-:::demo 可以通过指定 Table 组件的 `row-class-name` 属性来为 Table 中的某一行添加 class，表明该行处于某种状态。
+<script>
+  export default {
+    data() {
+      return {
+        tableData: [{
+          date: '2016-05-02',
+          name: '王小虎',
+          address: '上海市普陀区金沙江路 1518 弄'
+        }, {
+          date: '2016-05-04',
+          name: '王小虎',
+          address: '上海市普陀区金沙江路 1517 弄'
+        }, {
+          date: '2016-05-01',
+          name: '王小虎',
+          address: '上海市普陀区金沙江路 1519 弄'
+        }, {
+          date: '2016-05-03',
+          name: '王小虎',
+          address: '上海市普陀区金沙江路 1516 弄'
+        }]
+      }
+    }
+  }
+</script>
+```
+:::
+
+### 带状态表格（ 为某些行添加特定的类 ）
+
+:::demo 可以通过指定 Table 组件的 `row-class-name` 属性来为 Table 中的某一行添加 class，常常用来表明该行处于某种状态。
 ```html
 <template>
   <el-table
@@ -451,12 +501,9 @@
 </template>
 
 <style>
-  .el-table .info-row {
-    background: #c9e5f5;
-  }
-
-  .el-table .positive-row {
-    background: #e2f0e4;
+  .el-table .info-row, .el-table .info-row:hover > td {
+    background: #2a92f4;
+    color: white;
   }
 </style>
 
@@ -466,8 +513,6 @@
       tableRowClassName(row, index) {
         if (index === 1) {
           return 'info-row';
-        } else if (index === 3) {
-          return 'positive-row';
         }
         return '';
       }
@@ -508,7 +553,7 @@
   <el-table
     :data="tableData3"
     height="250"
-    border
+    col-border
     style="width: 100%">
     <el-table-column
       prop="date"
@@ -576,7 +621,7 @@
 <template>
   <el-table
     :data="tableData"
-    border
+    col-border
     style="width: 100%">
     <el-table-column
       fixed
@@ -676,7 +721,7 @@
 <template>
   <el-table
     :data="tableData3"
-    border
+    col-border
     style="width: 100%"
     height="250">
     <el-table-column
@@ -783,7 +828,7 @@
 <template>
   <el-table
     :data="tableData4"
-    border
+    col-border
     style="width: 100%"
     max-height="250">
     <el-table-column
@@ -908,7 +953,7 @@
 <template>
   <el-table
     :data="tableData3"
-    border
+    col-border
     style="width: 100%">
     <el-table-column
       prop="date"
@@ -1514,7 +1559,9 @@
 | data | 显示的数据 | array | — | — |
 | height | Table 的高度，默认为自动高度。如果 height 为 number 类型，单位 px；如果 height 为 string 类型，则 Table 的高度受控于外部样式。  | string/number | — | — |
 | stripe | 是否为斑马纹 table | boolean | — | false |
-| border | 是否带有纵向边框 | boolean | — | false |
+| border | 是否带有外围边框 | boolean | — | true |
+| row-border | 是否带有行分割线 | boolean | — | true |
+| col-border | 是否带有列分割线 | boolean | — | false |
 | fit | 列的宽度是否自撑开 | boolean | — | true |
 | show-header | 是否显示表头 | boolean | — | true |
 | highlight-current-row | 是否要高亮当前行 | boolean | — | false |
@@ -1566,7 +1613,7 @@
 | render-header | 列标题 Label 区域渲染使用的 Function | Function(h, { column, $index }) | — | — |
 | sortable | 对应列是否可以排序，如果设置为 'custom'，则代表用户希望远程排序，需要监听 Table 的 sort-change 事件 | boolean, string | true, false, 'custom' | false |
 | sort-method | 对数据进行排序的时候使用的方法，仅当 sortable 设置为 true 的时候有效 | Function(a, b) | — | — |
-| resizable | 对应列是否可以通过拖动改变宽度（需要在 el-table 上设置 border 属性为真） | boolean | — | true |
+| resizable | 对应列是否可以通过拖动改变宽度（需要在 el-table 上设置 col-border 属性为真） | boolean | — | true |
 | formatter | 用来格式化内容 | Function(row, column) | — | — |
 | show-overflow-tooltip | 当内容过长被隐藏时显示 tooltip | Boolean | — | false |
 | align | 对齐方式 | String | left/center/right | left |

@@ -94,7 +94,7 @@
     background-color: #eef1f6;
   }
 
-  .bg-white-dark {
+  .bg-dark-white {
     background-color: #f5f6f8;
   }
 

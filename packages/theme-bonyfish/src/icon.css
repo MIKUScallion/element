@@ -8,8 +8,7 @@
     font-style: normal;
 }
 
-[class^="el-icon-"], [class*=" el-icon-"],
-[class^="el-icon-"].svg > span, [class*=" el-icon-"].svg > span{
+[class^="el-icon-"], [class*=" el-icon-"] {
     /* use !important to prevent issues with browser extensions that change fonts */
     font-family: 'element-icons' !important;
     speak: none;
@@ -24,11 +23,26 @@
     /* Better Font Rendering =========== */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
 
-    &.svg > span:before {
-      content: "\e600";
-      opacity: 0;
-    }
+[class^="el-svg-"], [class*=" el-svg-"] {
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: baseline;
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &::before {
+    display: inline-block;
+    content: "＊";
+    opacity: 0;
+  }
 }
 
 .el-icon-arrow-down:before { content: "\e600"; }
@@ -71,20 +85,18 @@
 .el-icon-upload2:before { content: "\e627"; }
 .el-icon-view:before { content: "\e626"; }
 
-.el-icon-eye.svg > span {
+.el-svg-eye {
   @svg-load eye url(./fonts/el-icon-eye.svg) {
     fill: #8492a6;
   }
   background-image: svg-inline(eye);
-  background-size: 100% 100%;
 }
 
-.el-icon-clock.svg > span {
+.el-svg-clock {
   @svg-load clock url(./fonts/el-icon-clock.svg) {
     fill: #8492a6;
   }
   background-image: svg-inline(clock);
-  background-size: 100% 100%;
 }
 
 .el-icon-loading {

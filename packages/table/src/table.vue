@@ -4,6 +4,8 @@
       'el-table--fit': fit,
       'el-table--striped': stripe,
       'el-table--border': border,
+      'el-table--row-border': rowBorder,
+      'el-table--col-border': colBorder,
       'el-table--fluid-height': maxHeight,
       'el-table--enable-row-hover': !store.states.isComplex,
       'el-table--enable-row-transition': true || (store.states.data || []).length !== 0 && (store.states.data || []).length < 100
@@ -14,7 +16,7 @@
       <table-header
         :store="store"
         :layout="layout"
-        :border="border"
+        :border="colBorder"
         :default-sort="defaultSort"
         :abled-sort-orders="abledSortOrders"
         :style="{ width: layout.bodyWidth ? layout.bodyWidth + 'px' : '' }">
@@ -49,7 +51,7 @@
       <div class="el-table__fixed-header-wrapper" ref="fixedHeaderWrapper" v-if="showHeader">
         <table-header
           fixed="left"
-          :border="border"
+          :border="colborder"
           :store="store"
           :layout="layout"
           :style="{ width: layout.fixedWidth ? layout.fixedWidth + 'px' : '' }">
@@ -78,13 +80,13 @@
       v-if="rightFixedColumns.length > 0"
       :style="[
         { width: layout.rightFixedWidth ? layout.rightFixedWidth + 'px' : '' },
-        { right: layout.scrollY ? (border ? layout.gutterWidth : (layout.gutterWidth || 1)) + 'px' : '' },
+        { right: layout.scrollY ? (colBorder ? layout.gutterWidth : (layout.gutterWidth || 1)) + 'px' : '' },
         fixedHeight
       ]">
       <div class="el-table__fixed-header-wrapper" ref="rightFixedHeaderWrapper" v-if="showHeader">
         <table-header
           fixed="right"
-          :border="border"
+          :border="colBorder"
           :store="store"
           :layout="layout"
           :style="{ width: layout.rightFixedWidth ? layout.rightFixedWidth + 'px' : '' }">
@@ -156,7 +158,17 @@
 
       stripe: Boolean,
 
-      border: Boolean,
+      border: {
+        type: Boolean,
+        default: true
+      },
+
+      rowBorder: {
+        type: Boolean,
+        default: true
+      },
+
+      colBorder: Boolean,
 
       rowKey: [String, Function],
 

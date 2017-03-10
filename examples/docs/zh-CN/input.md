@@ -187,7 +187,7 @@
     }
   }
 
-  .test-password-input .el-icon-eye.svg:hover > span {
+  .test-password-input .el-input__icon.is-clickable:hover > i {
     @svg-load eye-hover url(../../../packages/theme-bonyfish/src/fonts/el-icon-eye.svg) {
       fill: #2981d4;
     }
@@ -261,7 +261,9 @@ export default {
     placeholder="请选择日期"
     v-model="input2"
     >
-    <i slot="icon" class="el-input__icon el-icon-eye svg is-clickable"><span></span></i>
+    <span slot="icon" class="el-input__icon">
+      <i class="el-svg-eye"></i>
+    </span>
   </el-input>
 </div>
 
@@ -281,13 +283,15 @@ export default {
     v-model="input2"
     class="test-password-input"
     >
-    <i @click="handleIconClick" slot="icon" class="el-input__icon el-icon-eye svg is-clickable"><span></span></i>
+    <span slot="icon" class="el-input__icon is-clickable" @click="handleIconClick">
+      <i class="el-svg-eye"></i>
+    </span>
   </el-input>
 </div>
 
 <style>
   /* 指定自定义 SVG 图标，并获得与原始字体图标相同的效果 */
-  .test-password-input .el-icon-eye.svg:hover > span {
+  .test-password-input .el-input__icon.is-clickable:hover > i {
     @svg-load eye-hover url(../../../packages/theme-bonyfish/src/fonts/el-icon-eye.svg) {
       fill: #2981d4;
     }
@@ -326,7 +330,9 @@ export default {
     clearable
     :type="passwordType"
     >
-    <i @click="handleEyeIconClick" slot="icon" class="el-input__icon el-icon-eye svg is-clickable"><span></span></i>
+    <span slot="icon" class="el-input__icon is-clickable" @click="handleEyeIconClick">
+      <i class="el-svg-eye"></i>
+    </span>
   </el-input>
 </div>
 

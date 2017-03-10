@@ -54,7 +54,6 @@
       color: #99a9bf;
     }
     & i {
-      display: block;
       font-size: 24px;
       margin-bottom: 15px;
       color: #8492a6;
@@ -87,7 +86,9 @@
 <ul class="icon-list">
   <li v-for="name in icons">
     <span>
-      <i :class="'el-icon-' + name"></i>
+      <div>
+        <i :class="'el-icon-' + name"></i>
+      </div>
       {{'el-icon-' + name}}
     </span>
   </li>
@@ -100,14 +101,18 @@ SVG 图标不同于字体图标，暂时只能独立使用......
 <ul class="icon-list">
   <li>
     <span>
-      <i class="el-icon-eye svg"><span></span></i>
-      {{ 'el-icon-eye.svg' }}
+      <div>
+        <i class="el-svg-eye"></i>
+      </div>
+      {{ 'el-svg-eye' }}
     </span>
   </li>
   <li>
     <span>
-      <i class="el-icon-clock svg"><span></span></i>
-      {{ 'el-icon-clock.svg' }}
+      <div>
+        <i class="el-svg-clock"></i>
+      </div>
+      {{ 'el-svg-clock' }}
     </span>
   </li>
 </ul>

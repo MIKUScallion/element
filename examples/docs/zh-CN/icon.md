@@ -110,6 +110,14 @@ SVG 图标不同于字体图标，暂时只能独立使用......
   <li>
     <span>
       <div>
+        <i class="el-svg-eye-close"></i>
+      </div>
+      {{ 'el-svg-eye-close' }}
+    </span>
+  </li>
+  <li>
+    <span>
+      <div>
         <i class="el-svg-clock"></i>
       </div>
       {{ 'el-svg-clock' }}

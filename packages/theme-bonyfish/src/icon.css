@@ -92,6 +92,13 @@
   background-image: svg-inline(eye);
 }
 
+.el-svg-eye-close {
+  @svg-load eye-close url(./fonts/el-icon-eye-close.svg) {
+    fill: #8492a6;
+  }
+  background-image: svg-inline(eye-close);
+}
+
 .el-svg-clock {
   @svg-load clock url(./fonts/el-icon-clock.svg) {
     fill: #8492a6;

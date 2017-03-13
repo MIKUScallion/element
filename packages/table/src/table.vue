@@ -7,7 +7,7 @@
       'el-table--row-border': rowBorder,
       'el-table--col-border': colBorder,
       'el-table--fluid-height': maxHeight,
-      'el-table--enable-row-hover': !store.states.isComplex,
+      'el-table--enable-row-hover': !store.states.isComplex && enableRowHover,
       'el-table--enable-row-transition': true || (store.states.data || []).length !== 0 && (store.states.data || []).length < 100
     }"
     @mouseleave="handleMouseLeave($event)">
@@ -194,7 +194,12 @@
       defaultExpandAll: Boolean,
 
       defaultSort: Object,
-      abledSortOrders: Array
+      abledSortOrders: Array,
+
+      enableRowHover: {
+        type: Boolean,
+        default: true
+      }
     },
 
     components: {

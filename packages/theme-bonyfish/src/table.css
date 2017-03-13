@@ -409,8 +409,10 @@
       tr.hover-row > td {
         background-color: var(--color-light-gray);
       }
-
       tr.current-row > td {
+        background: color(var(--color-light-gray) s(65%) l(91%));
+      }
+      tr.current-row.hover-row > td {
         background: color(var(--color-light-gray) s(65%) l(91%));
       }
     }
@@ -451,6 +453,12 @@
     @modifier enable-row-hover {
       tr:hover > td {
         background-color: var(--color-light-gray);
+      }
+      tr.current-row > td {
+        background: color(var(--color-light-gray) s(65%) l(91%));
+      }
+      tr.current-row:hover > td {
+        background: color(var(--color-light-gray) s(65%) l(91%));
       }
     }
 

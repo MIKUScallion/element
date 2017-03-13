@@ -51,7 +51,7 @@
       <div class="el-table__fixed-header-wrapper" ref="fixedHeaderWrapper" v-if="showHeader">
         <table-header
           fixed="left"
-          :border="colborder"
+          :border="colBorder"
           :store="store"
           :layout="layout"
           :style="{ width: layout.fixedWidth ? layout.fixedWidth + 'px' : '' }">

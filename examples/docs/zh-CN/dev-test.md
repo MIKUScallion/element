@@ -2,9 +2,6 @@
   export default {
     data() {
       return {
-        d1Select: '',
-        d1Input: '',
-
         d2Options: [{
           value: '选项1',
           label: '黄金糕'
@@ -27,37 +24,6 @@
   };
 </script>
 ## 开发测试
-
-## Input 输入框
-
-### 复合型输入框
-
-发光效果需要优化
-
-::: demo 可通过 slot 来指定在 input 中前置或者后置内容。
-```html
-<div>
-  <el-input placeholder="请输入内容" v-model="d1Input">
-    <el-select style="width: 110px;" v-model="d1Select" slot="prepend" placeholder="请选择">
-      <el-option label="餐厅名" value="1"></el-option>
-      <el-option label="订单号" value="2"></el-option>
-      <el-option label="用户电话" value="3"></el-option>
-    </el-select>
-    <el-button slot="append" icon="search"></el-button>
-  </el-input>
-</div>
-<script>
-  export default {
-    data() {
-      return {
-        d1Select: '',
-        d1Input: ''
-      };
-    }
-  };
-</script>
-```
-:::
 
 ## Select 选择器
 

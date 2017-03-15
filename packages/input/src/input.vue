@@ -3,10 +3,13 @@
     type === 'textarea' ? 'el-textarea' : 'el-input',
     size ? 'el-input--' + size : '',
     {
+      'is-focused': type !== 'textarea' && focused,
       'is-disabled': disabled,
       'el-input-group': $slots.prepend || $slots.append,
       'el-input-group--append': $slots.append,
-      'el-input-group--prepend': $slots.prepend
+      'el-input-group--prepend': $slots.prepend,
+      'el-input-group--un-prepend-divider': unPrependDivider,
+      'el-input-group--un-append-divider': unAppendDivider,
     }
   ]">
     <template v-if="type !== 'textarea'">
@@ -96,6 +99,7 @@
 
     data() {
       return {
+        focused: false,
         currentValue: this.value,
         textareaStyle: {}
       };
@@ -137,7 +141,9 @@
         type: Boolean,
         default: true
       },
-      onIconClick: Function
+      onIconClick: Function,
+      unPrependDivider: Boolean,
+      unAppendDivider: Boolean
     },
 
     computed: {
@@ -158,6 +164,7 @@
         if (this.validateEvent) {
           this.dispatch('ElFormItem', 'el.form.blur', [this.currentValue]);
         }
+        this.focused = false;
       },
       inputSelect() {
         this.$refs.input.select();
@@ -176,6 +183,7 @@
       },
       handleFocus(event) {
         this.$emit('focus', event);
+        this.focused = true;
       },
       handleInput(event) {
         this.setCurrentValue(event.target.value);

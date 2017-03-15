@@ -8,6 +8,12 @@
     display: inline-block;
     width: 100%;
 
+    &:hover {
+      .el-input-group__prepend, .el-input__inner, .el-input-group__append {
+        border-color: var(--input-hover-border);
+      }
+    }
+
     @e inner {
       appearance: none;
       background-color: var(--color-base-white);
@@ -27,16 +33,6 @@
 
       &::placeholder {
         color: var(--input-placeholder-color);
-      }
-
-      &:hover {
-        border-color: var(--input-hover-border);
-      }
-
-      &:focus {
-        outline: none;
-        border-color: var(--input-focus-border);
-        box-shadow: 0 0 4px var(--input-focus-border);
       }
     }
 
@@ -85,6 +81,14 @@
       .el-input__inner {
         outline: none;
         border-color: var(--input-hover-border);
+      }
+    }
+
+    @when focused {
+      .el-input-group__prepend, .el-input__inner, .el-input-group__append{
+        outline: none;
+        border-color: var(--input-focus-border);
+        box-shadow: 0 0 4px var(--input-focus-border);
       }
     }
 
@@ -170,8 +174,6 @@
         float: right;
         width: 1%;
         margin: 0;
-
-
       }
     }
     @e prepend {
@@ -195,6 +197,16 @@
       .el-input__inner {
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
+      }
+    }
+    @m un-prepend-divider {
+      .el-input__inner {
+        border-left: 0;
+      }
+    }
+    @m un-append-divider {
+      .el-input__inner {
+        border-right: 0;
       }
     }
   }

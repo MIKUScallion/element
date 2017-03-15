@@ -298,7 +298,7 @@ export default {
 
 <style>
   /* 指定自定义 SVG 图标，并获得与原始字体图标相同的效果 */
-  .test-password-input .el-input__icon.is-clickable:hover > i {
+  .test-password-input .el-input__icon.is-clickable:hover > .el-svg-eye {
     @svg-load eye-hover url(../../../packages/theme-bonyfish/src/fonts/el-icon-eye.svg) {
       fill: #2981d4;
     }
@@ -345,12 +345,18 @@ export default {
 </div>
 
 <style>
-  /* 指定自定义 SVG 图标，并获得与原始字体图标相同的效果 */
-  .test-password-input .el-icon-eye.svg:hover > span {
+  .test-password-input .el-input__icon.is-clickable:hover > .el-svg-eye {
     @svg-load eye-hover url(../../../packages/theme-bonyfish/src/fonts/el-icon-eye.svg) {
       fill: #2981d4;
     }
     background-image: svg-inline(eye-hover);
+  }
+
+  .test-password-input .el-input__icon.is-clickable:hover > .el-svg-eye-close {
+    @svg-load eye-colse-hover url(../../../packages/theme-bonyfish/src/fonts/el-icon-eye-close.svg) {
+      fill: #2981d4;
+    }
+    background-image: svg-inline(eye-colse-hover);
   }
 </style>
 
@@ -439,7 +445,7 @@ export default {
 ::: demo 可通过 slot 来指定在 input 中前置或者后置内容。
 ```html
 <div>
-  <el-input placeholder="请输入内容" v-model="input3">
+  <el-input placeholder="请输入内容" v-model="input3" un-prepend-divider>
     <template slot="prepend">Http://</template>
   </el-input>
 </div>
@@ -890,6 +896,8 @@ export default {
 | form | 原生属性 | string | — | — |
 | on-icon-click | 点击 Input 内的图标的钩子函数 | function | — | — |
 | clearable | 点击 Input 内的清除图标，可快速清除内容 | boolean | — | — |
+| un-prepend-divider | 清除 prepend 的分割线 | boolean | true, false | false |
+| un-append-divider | 清除 append 的分割线 | boolean | true, false | false |
 ### Input Events
 | 事件名称 | 说明 | 回调参数 |
 |---------|--------|---------|

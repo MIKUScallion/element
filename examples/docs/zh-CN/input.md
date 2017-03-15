@@ -187,11 +187,18 @@
     }
   }
 
-  .test-password-input .el-input__icon.is-clickable:hover > i {
+  .test-password-input .el-input__icon.is-clickable:hover > .el-svg-eye {
     @svg-load eye-hover url(../../../packages/theme-bonyfish/src/fonts/el-icon-eye.svg) {
       fill: #2981d4;
     }
     background-image: svg-inline(eye-hover);
+  }
+
+  .test-password-input .el-input__icon.is-clickable:hover > .el-svg-eye-close {
+    @svg-load eye-colse-hover url(../../../packages/theme-bonyfish/src/fonts/el-icon-eye-close.svg) {
+      fill: #2981d4;
+    }
+    background-image: svg-inline(eye-colse-hover);
   }
 
 </style>
@@ -331,7 +338,8 @@ export default {
     :type="passwordType"
     >
     <span slot="icon" class="el-input__icon is-clickable" @click="handleEyeIconClick">
-      <i class="el-svg-eye"></i>
+      <i v-if="passwordType === 'password'" class="el-svg-eye-close"></i>
+      <i v-if="passwordType === 'text'" class="el-svg-eye"></i>
     </span>
   </el-input>
 </div>

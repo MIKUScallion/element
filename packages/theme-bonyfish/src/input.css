@@ -42,9 +42,9 @@
 
     @e icon {
       position: absolute;
-      width: 35px;
+      width: 22px;
       height: 100%;
-      right: 0;
+      right: 10px;
       top: 0;
       text-align: center;
       color: var(--input-icon-color);
@@ -59,14 +59,14 @@
       }
 
       & + & {
-        right: 35px;
+        right: 32px;
       }
 
       & + .el-input__inner {
-        padding-right: 35px;
+        padding-right: 42px;
       }
       & + & + .el-input__inner {
-        padding-right: 70px;
+        padding-right: 64px;
       }
 
       @when clickable {

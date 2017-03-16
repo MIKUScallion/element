@@ -186,21 +186,6 @@
       }
     }
   }
-
-  .test-password-input .el-input__icon.is-clickable:hover > .el-svg-eye {
-    @svg-load eye-hover url(../../../packages/theme-bonyfish/src/fonts/el-icon-eye.svg) {
-      fill: #2981d4;
-    }
-    background-image: svg-inline(eye-hover);
-  }
-
-  .test-password-input .el-input__icon.is-clickable:hover > .el-svg-eye-close {
-    @svg-load eye-colse-hover url(../../../packages/theme-bonyfish/src/fonts/el-icon-eye-close.svg) {
-      fill: #2981d4;
-    }
-    background-image: svg-inline(eye-colse-hover);
-  }
-
 </style>
 
 ## Input 输入框
@@ -288,23 +273,12 @@ export default {
   <el-input
     placeholder="请选择日期"
     v-model="input2"
-    class="test-password-input"
     >
     <span slot="icon" class="el-input__icon is-clickable" @click="handleIconClick">
       <i class="el-svg-eye"></i>
     </span>
   </el-input>
 </div>
-
-<style>
-  /* 指定自定义 SVG 图标，并获得与原始字体图标相同的效果 */
-  .test-password-input .el-input__icon.is-clickable:hover > .el-svg-eye {
-    @svg-load eye-hover url(../../../packages/theme-bonyfish/src/fonts/el-icon-eye.svg) {
-      fill: #2981d4;
-    }
-    background-image: svg-inline(eye-hover);
-  }
-</style>
 
 <script>
 export default {
@@ -333,7 +307,6 @@ export default {
   <el-input
     placeholder="请输入密码"
     v-model="password"
-    class="test-password-input"
     clearable
     :type="passwordType"
     >
@@ -343,22 +316,6 @@ export default {
     </span>
   </el-input>
 </div>
-
-<style>
-  .test-password-input .el-input__icon.is-clickable:hover > .el-svg-eye {
-    @svg-load eye-hover url(../../../packages/theme-bonyfish/src/fonts/el-icon-eye.svg) {
-      fill: #2981d4;
-    }
-    background-image: svg-inline(eye-hover);
-  }
-
-  .test-password-input .el-input__icon.is-clickable:hover > .el-svg-eye-close {
-    @svg-load eye-colse-hover url(../../../packages/theme-bonyfish/src/fonts/el-icon-eye-close.svg) {
-      fill: #2981d4;
-    }
-    background-image: svg-inline(eye-colse-hover);
-  }
-</style>
 
 <script>
 export default {
@@ -447,6 +404,11 @@ export default {
 <div>
   <el-input placeholder="请输入内容" v-model="input3" un-prepend-divider>
     <template slot="prepend">Http://</template>
+  </el-input>
+</div>
+<div style="margin-top: 15px;">
+  <el-input placeholder="请输入内容" v-model="input3">
+    <template slot="prepend"><div style="width:100px; text-align:center; letter-spacing: 10px;text-indent: 10px;">验证码</div></template>
   </el-input>
 </div>
 <div style="margin-top: 15px;">

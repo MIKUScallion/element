@@ -22,6 +22,7 @@
     >
     </span>
     <el-input
+      :align="align"
       :value="currentValue"
       @keydown.up.native.prevent="increase"
       @keydown.down.native.prevent="decrease"
@@ -98,6 +99,9 @@
       controls: {
         type: Boolean,
         default: true
+      },
+      align: {
+        type: String
       },
       customControl: Boolean,
       customMinDisabled: Boolean,

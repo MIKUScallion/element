@@ -41,6 +41,7 @@
       <input
         v-if="type !== 'textarea'"
         class="el-input__inner"
+        :style="{'text-align': align}"
         :type="type"
         :name="name"
         :placeholder="placeholder"
@@ -143,7 +144,10 @@
       },
       onIconClick: Function,
       unPrependDivider: Boolean,
-      unAppendDivider: Boolean
+      unAppendDivider: Boolean,
+      align: {
+        type: String
+      }
     },
 
     computed: {

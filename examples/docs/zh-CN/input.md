@@ -860,6 +860,7 @@ export default {
 | clearable | 点击 Input 内的清除图标，可快速清除内容 | boolean | — | — |
 | un-prepend-divider | 清除 prepend 的分割线 | boolean | true, false | false |
 | un-append-divider | 清除 append 的分割线 | boolean | true, false | false |
+| algin | 内容对齐方式        | string | — | left, center, right |
 ### Input Events
 | 事件名称 | 说明 | 回调参数 |
 |---------|--------|---------|

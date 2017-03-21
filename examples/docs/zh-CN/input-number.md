@@ -45,7 +45,7 @@
     <el-input-number v-model="num1" @change="handleChange" :min="1" :max="10"></el-input-number>
   </div>
 
-  <el-input-number :both-side="true" v-model="num1" @change="handleChange" :min="1" :max="10"></el-input-number>
+  <el-input-number align="center" :both-side="true" v-model="num1" @change="handleChange" :min="1" :max="10"></el-input-number>
 </template>
 <script>
   export default {
@@ -163,8 +163,14 @@
 | disabled | 是否禁用计数器        | boolean | — | false |
 | controls | 是否使用控制按钮        | boolean | — | true |
 | both-side | 是否把控制按钮放置在两边        | boolean | — | false |
+| algin | 内容对齐方式        | string | — | left, center, right |
+| custom-control | 完全自定义控制        | boolean | — | false |
+| custom-min-disabled | 自定义控制添加按钮禁用        | boolean | — | false |
+| custom-max-disabled | 自定义控制减少按钮禁用       | boolean | — | false |
 
 ### Events
 | 事件名称 | 说明 | 回调参数 |
 |---------|--------|---------|
 | change | 绑定值被改变时触发 | 最后变更的值 |
+| increase | 添加时触发 | 事件句柄 |
+| decrease | 减少时触发 | 事件句柄 |

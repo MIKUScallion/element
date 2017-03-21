@@ -7,12 +7,19 @@
         num3: 5,
         num4: 1,
         num5: 1,
-        num6: 1
+        num6: 1,
+        customNum: 1
       }
     },
     methods: {
       handleChange(value) {
         console.log(value);
+      },
+      increase () {
+        this.customNum++
+      },
+      decrease () {
+        this.customNum--
       }
     }
   };
@@ -92,6 +99,26 @@
     data() {
       return {
         num3: 5
+      }
+    }
+  };
+</script>
+```
+:::
+
+### 完全自定义控制
+
+:::demo
+
+```html
+<template>
+  <el-input-number custom-control custom-max-disabled @increase="increase" @decrease="decrease" v-model="customNum"></el-input-number>
+</template>
+<script>
+  export default {
+    data() {
+      return {
+        customNum: 1
       }
     }
   };

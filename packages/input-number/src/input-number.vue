@@ -10,14 +10,14 @@
     <span
       v-if="controls"
       class="el-input-number__decrease el-icon-minus"
-      :class="{'is-disabled': minDisabled}"
+      :class="{'is-disabled': minDisabled || customMinDisabled}"
       v-repeat-click="decrease"
     >
     </span>
     <span
       v-if="controls"
       class="el-input-number__increase el-icon-plus"
-      :class="{'is-disabled': maxDisabled}"
+      :class="{'is-disabled': maxDisabled || customMaxDisabled}"
       v-repeat-click="increase"
     >
     </span>
@@ -98,7 +98,10 @@
       controls: {
         type: Boolean,
         default: true
-      }
+      },
+      customControl: Boolean,
+      customMinDisabled: Boolean,
+      customMaxDisabled: Boolean
     },
     data() {
       return {
@@ -120,9 +123,15 @@
     },
     computed: {
       minDisabled() {
+        if (this.customControl) {
+          return false;
+        }
         return this._decrease(this.value, this.step) < this.min;
       },
       maxDisabled() {
+        if (this.customControl) {
+          return false;
+        }
         return this._increase(this.value, this.step) > this.max;
       },
       precision() {
@@ -159,14 +168,18 @@
         return this.toPrecision((precisionFactor * val - precisionFactor * step) / precisionFactor);
       },
       increase() {
-        if (this.disabled || this.maxDisabled) return;
+        if (this.customMaxDisabled) { return false; };
+        this.$emit('increase', event);
+        if (this.customControl || this.disabled || this.maxDisabled) return;
         const value = this.value || 0;
         const newVal = this._increase(value, this.step);
         if (newVal > this.max) return;
         this.setCurrentValue(newVal);
       },
       decrease() {
-        if (this.disabled || this.minDisabled) return;
+        if (this.customMinDisabled) { return false; };
+        this.$emit('decrease', event);
+        if (this.customControl || this.disabled || this.minDisabled) return;
         const value = this.value || 0;
         const newVal = this._decrease(value, this.step);
         if (newVal < this.min) return;

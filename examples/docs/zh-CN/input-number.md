@@ -8,7 +8,7 @@
         num4: 1,
         num5: 1,
         num6: 1,
-        customNum: 1
+        customNum: null
       }
     },
     methods: {
@@ -112,7 +112,7 @@
 
 ```html
 <template>
-  <el-input-number custom-control custom-max-disabled @increase="increase" @decrease="decrease" v-model="customNum"></el-input-number>
+  <el-input-number disabled placeholder="完全自定义控制" custom-control custom-max-disabled @increase="increase" @decrease="decrease" v-model="customNum"></el-input-number>
 </template>
 <script>
   export default {
@@ -167,7 +167,7 @@
 | custom-control | 完全自定义控制        | boolean | — | false |
 | custom-min-disabled | 自定义控制添加按钮禁用        | boolean | — | false |
 | custom-max-disabled | 自定义控制减少按钮禁用       | boolean | — | false |
-
+| placeholder   | 输入框占位文本   | string          | — | — |
 ### Events
 | 事件名称 | 说明 | 回调参数 |
 |---------|--------|---------|

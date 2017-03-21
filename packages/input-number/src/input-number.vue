@@ -23,6 +23,7 @@
     </span>
     <el-input
       :align="align"
+      :placeholder="placeholder"
       :value="currentValue"
       @keydown.up.native.prevent="increase"
       @keydown.down.native.prevent="decrease"
@@ -105,7 +106,8 @@
       },
       customControl: Boolean,
       customMinDisabled: Boolean,
-      customMaxDisabled: Boolean
+      customMaxDisabled: Boolean,
+      placeholder: String
     },
     data() {
       return {
@@ -116,6 +118,11 @@
       value: {
         immediate: true,
         handler(value) {
+          if (!value && this.placeholder) {
+            this.currentValue = value;
+            this.$emit('input', value);
+            return;
+          }
           let newVal = Number(value);
           if (isNaN(newVal)) return;
           if (newVal >= this.max) newVal = this.max;
@@ -172,7 +179,7 @@
         return this.toPrecision((precisionFactor * val - precisionFactor * step) / precisionFactor);
       },
       increase() {
-        if (this.customMaxDisabled) { return false; };
+        if (this.disabled || this.customMaxDisabled) { return false; };
         this.$emit('increase', event);
         if (this.customControl || this.disabled || this.maxDisabled) return;
         const value = this.value || 0;
@@ -181,7 +188,7 @@
         this.setCurrentValue(newVal);
       },
       decrease() {
-        if (this.customMinDisabled) { return false; };
+        if (this.disabled || this.customMinDisabled) { return false; };
         this.$emit('decrease', event);
         if (this.customControl || this.disabled || this.minDisabled) return;
         const value = this.value || 0;

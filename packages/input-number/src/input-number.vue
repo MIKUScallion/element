@@ -9,17 +9,19 @@
   >
     <span
       v-if="controls"
-      class="el-input-number__decrease el-icon-minus"
+      class="el-input-number__decrease"
       :class="{'is-disabled': minDisabled || customMinDisabled}"
       v-repeat-click="decrease"
     >
+       <i class="el-icon-minus"></i>
     </span>
     <span
       v-if="controls"
-      class="el-input-number__increase el-icon-plus"
+      class="el-input-number__increase"
       :class="{'is-disabled': maxDisabled || customMaxDisabled}"
       v-repeat-click="increase"
     >
+      <i class="el-icon-plus"></i>
     </span>
     <el-input
       :align="align"
@@ -67,6 +69,7 @@
           on(el, 'mousedown', () => {
             startTime = new Date();
             once(document, 'mouseup', clear);
+            clearInterval(interval);
             interval = setInterval(handler, 100);
           });
         }
@@ -178,8 +181,8 @@
 
         return this.toPrecision((precisionFactor * val - precisionFactor * step) / precisionFactor);
       },
-      increase() {
-        if (this.disabled || this.customMaxDisabled) { return false; };
+      increase(event) {
+        if (this.disabled || this.customMaxDisabled) return;
         this.$emit('increase', event);
         if (this.customControl || this.disabled || this.maxDisabled) return;
         const value = this.value || 0;
@@ -187,8 +190,8 @@
         if (newVal > this.max) return;
         this.setCurrentValue(newVal);
       },
-      decrease() {
-        if (this.disabled || this.customMinDisabled) { return false; };
+      decrease(event) {
+        if (this.disabled || this.customMinDisabled) return;
         this.$emit('decrease', event);
         if (this.customControl || this.disabled || this.minDisabled) return;
         const value = this.value || 0;

@@ -4,8 +4,16 @@ var md = require('markdown-it')();
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 var striptags = require('./strip-tags');
 var slugify = require('transliteration').slugify;
+var defaultTheme = 'bonyfish';
+
 var isProd = process.env.NODE_ENV === 'production';
 var isPlay = !!process.env.PLAY_ENV;
+var theme = process.env.THEME ? process.env.THEME : defaultTheme;
+var port = process.env.PORT ? process.env.PORT : 8085;
+
+console.log('************************\n');
+console.log('[Current Theme]: ' + theme + '\n');
+console.log('************************\n');
 
 function convert(str) {
   str = str.replace(/(&#x)(\w{4});/gi, function($0) {
@@ -16,9 +24,9 @@ function convert(str) {
 
 cooking.set({
   entry: isProd ? {
-    docs: './examples/entry.js',
+    docs: './examples/themes/' + theme + '.js',
     'element-ui': './src/index.js'
-  } : (isPlay ? './examples/play.js' : './examples/entry.js'),
+  } : (isPlay ? './examples/play.js' : './examples/themes/' + theme + '.js'),
   dist: './examples/element-ui/',
   template: [
     {
@@ -31,7 +39,7 @@ cooking.set({
   hash: true,
   devServer: {
     hostname: '0.0.0.0',
-    port: 8085,
+    port,
     log: false,
     publicPath: '/'
   },

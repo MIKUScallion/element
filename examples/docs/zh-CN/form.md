@@ -314,9 +314,9 @@
 ```html
 <el-form :inline="true" :model="formInline" class="demo-form-inline">
   <el-form-item>
-    <el-input v-model="formInline.user" placeholder="审批人"></el-input>
+    <el-input size="large" v-model="formInline.user" placeholder="审批人"></el-input>
   </el-form-item><el-form-item>
-    <el-select v-model="formInline.region" placeholder="活动区域">
+    <el-select size="large" v-model="formInline.region" placeholder="活动区域">
       <el-option label="区域一" value="shanghai"></el-option>
       <el-option label="区域二" value="beijing"></el-option>
     </el-select>

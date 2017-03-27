@@ -121,7 +121,9 @@
       value: {
         immediate: true,
         handler(value) {
-          if (!value && this.placeholder) {
+          // when value is null, '', false and have placeholder
+          // show placeholder
+          if (value !== 0 && !value && this.placeholder) {
             this.currentValue = value;
             this.$emit('input', value);
             return;
@@ -133,6 +135,11 @@
           this.currentValue = newVal;
           this.$emit('input', newVal);
         }
+      },
+      // on placeholder change
+      // clean currentValue
+      placeholder(val) {
+        this.currentValue = null;
       }
     },
     computed: {

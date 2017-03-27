@@ -112,13 +112,13 @@
 
 ```html
 <template>
-  <el-input-number disabled placeholder="完全自定义控制" custom-control custom-max-disabled @increase="increase" @decrease="decrease" v-model="customNum"></el-input-number>
+  <el-input-number placeholder="完全自定义控制" custom-control @increase="increase" @decrease="decrease" v-model="customNum === 0 ? null : customNum"></el-input-number>
 </template>
 <script>
   export default {
     data() {
       return {
-        customNum: 1
+        customNum: 0
       }
     }
   };

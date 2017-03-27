@@ -11,7 +11,7 @@
   "scripts": {
     "bootstrap": "yarn || npm i",
     "build:file": "node build/bin/iconInit.js & node build/bin/build-entry.js & node build/bin/i18n.js & node build/bin/version.js",
-    "build:theme": "node build/bin/gen-cssfile && gulp build --gulpfile packages/theme-bonyfish/gulpfile.js && cp-cli packages/theme-bonyfish/lib lib/theme-bonyfish",
+    "build:theme": "node build/bin/gen-cssfile && node build/bin/build-theme.js",
     "build:utils": "cross-env BABEL_ENV=utils babel src --out-dir lib --ignore src/index.js",
     "clean": "rimraf lib && rimraf packages/*/lib && rimraf test/**/coverage && lerna clean --yes",
     "deploy": "npm run deploy:build && gh-pages -d examples/element-ui --remote eleme && del examples/element-ui",
@@ -105,6 +105,7 @@
     "postcss-loader": "^0.11.1",
     "postcss-salad": "^1.0.8",
     "rimraf": "^2.5.4",
+    "shelljs": "^0.7.7",
     "sinon": "^1.17.6",
     "sinon-chai": "^2.8.0",
     "style-loader": "^0.13.1",

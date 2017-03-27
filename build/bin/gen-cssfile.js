@@ -2,7 +2,8 @@ var fs = require('fs');
 var path = require('path');
 var Components = require('../../components.json');
 var THEMES = [
-  'theme-bonyfish'
+  'theme-bonyfish',
+  'theme-sunfish'
 ];
 var BASEPATH = path.resolve(__dirname, '../../packages/');
 Components = Object.keys(Components);

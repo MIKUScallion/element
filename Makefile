@@ -44,6 +44,9 @@ deploy-sunfish-212:
 deploy-bonyfish-common-module:
 	cp ./lib/index.js ../common-module/element && cp -r ./lib/theme-bonyfish/fonts ../common-module/element/themes/bonyfish/ && cp ./lib/theme-bonyfish/index.css ../common-module/element/themes/bonyfish/
 
+deploy-bonyfish-brokerage-web-common-module:
+	cp ./lib/index.js ../brokerage-web/common-module/element && cp -r ./lib/theme-bonyfish/fonts ../brokerage-web/common-module/element/themes/bonyfish/ && cp ./lib/theme-bonyfish/index.css ../brokerage-web/common-module/element/themes/bonyfish/
+
 deploy-sunfish-common-module:
 	cp ./lib/index.js ../common-module/element && cp -r ./lib/theme-sunfish/fonts ../common-module/element/themes/sunfish/ && cp ./lib/theme-sunfish/index.css ../common-module/element/themes/sunfish/
 

@@ -138,8 +138,13 @@
       },
       // on placeholder change
       // clean currentValue
+      // TODO:
       placeholder(val) {
+        const oldVal = this.currentValue;
         this.currentValue = null;
+        const newVal = this.currentValue;
+        this.$emit('change', newVal, oldVal);
+        this.$emit('input', newVal);
       }
     },
     computed: {

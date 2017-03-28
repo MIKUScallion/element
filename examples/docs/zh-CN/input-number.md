@@ -168,6 +168,8 @@
 | custom-min-disabled | 自定义控制添加按钮禁用        | boolean | — | false |
 | custom-max-disabled | 自定义控制减少按钮禁用       | boolean | — | false |
 | placeholder   | 输入框占位文本   | string          | — | — |
+| show-placeholder | 强制显示 placeholder        | boolean | — | false |
+
 ### Events
 | 事件名称 | 说明 | 回调参数 |
 |---------|--------|---------|

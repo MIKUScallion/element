@@ -54,7 +54,7 @@
         :min="min"
         :max="max"
         :form="form"
-        :value="currentValue"
+        :value="showPlaceholder ? null : currentValue"
         ref="input"
         @input="handleInput"
         @focus="handleFocus"
@@ -69,7 +69,7 @@
     <textarea
       v-else
       class="el-textarea__inner"
-      :value="currentValue"
+      :value="showPlaceholder ? null : currentValue"
       @input="handleInput"
       ref="textarea"
       :name="name"
@@ -147,7 +147,8 @@
       unAppendDivider: Boolean,
       align: {
         type: String
-      }
+      },
+      showPlaceholder: Boolean
     },
 
     computed: {

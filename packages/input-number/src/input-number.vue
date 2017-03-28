@@ -27,6 +27,7 @@
       :align="align"
       :placeholder="placeholder"
       :value="currentValue"
+      :showPlaceholder="showPlaceholder"
       @keydown.up.native.prevent="increase"
       @keydown.down.native.prevent="decrease"
       @blur="handleBlur"
@@ -110,7 +111,8 @@
       customControl: Boolean,
       customMinDisabled: Boolean,
       customMaxDisabled: Boolean,
-      placeholder: String
+      placeholder: String,
+      showPlaceholder: Boolean
     },
     data() {
       return {
@@ -121,13 +123,6 @@
       value: {
         immediate: true,
         handler(value) {
-          // when value is null, '', false and have placeholder
-          // show placeholder
-          if (value !== 0 && !value && this.placeholder) {
-            this.currentValue = value;
-            this.$emit('input', value);
-            return;
-          }
           let newVal = Number(value);
           if (isNaN(newVal)) return;
           if (newVal >= this.max) newVal = this.max;
@@ -135,16 +130,6 @@
           this.currentValue = newVal;
           this.$emit('input', newVal);
         }
-      },
-      // on placeholder change
-      // clean currentValue
-      // TODO:
-      placeholder(val) {
-        const oldVal = this.currentValue;
-        this.currentValue = null;
-        const newVal = this.currentValue;
-        this.$emit('change', newVal, oldVal);
-        this.$emit('input', newVal);
       }
     },
     computed: {

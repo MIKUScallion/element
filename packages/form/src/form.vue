@@ -1,5 +1,5 @@
 <template>
-  <form @submit.native="unSubmit ? preventDefault : null" class="el-form" :class="[
+  <form @submit="preventDefault" class="el-form" :class="[
     labelPosition ? 'el-form--label-' + labelPosition : '',
     { 'el-form--inline': inline }
   ]">
@@ -52,6 +52,13 @@
       });
     },
     methods: {
+      preventDefault(event) {
+        if (this.unSubmit) {
+          event.preventDefault();
+          return false;
+        }
+        return true;
+      },
       resetFields() {
         this.fields.forEach(field => {
           field.resetField();
@@ -76,10 +83,6 @@
         if (!field) { throw new Error('must call validateField with valid prop string!'); }
 
         field.validate('', cb);
-      },
-      preventDefault(event) {
-        event.preventDefault();
-        return false;
       }
     }
   };

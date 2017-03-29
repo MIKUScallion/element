@@ -111,6 +111,12 @@ export default {
       if (newRow) {
         newRow.classList.add('current-row');
       }
+    },
+    'store.states.data': {
+      immediate: true,
+      handler() {
+        this.initTooltip();
+      }
     }
   },
 
@@ -246,17 +252,18 @@ export default {
 
     handleExpandClick(row) {
       this.store.commit('toggleRowExpanded', row);
-    }
-  },
+    },
 
-  mounted() {
-    this.$nextTick(function() {
-      const refKeys = Object.keys(this.$refs).map(key => key.indexOf('tooltip') !== -1 && key);
-      for (let key of refKeys) {
-        const tooltipEl = this.$refs[key].$el;
-        tooltipEl.style.width = tooltipEl.offsetWidth + 'px';
-        tooltipEl.style.whiteSpace = 'nowrap';
-      }
-    });
+    initTooltip() {
+      this.$nextTick(function() {
+        const refKeys = Object.keys(this.$refs).map(key => key.indexOf('tooltip') !== -1 && key);
+        console.log(refKeys);
+        for (let key of refKeys) {
+          const tooltipEl = this.$refs[key].$el;
+          tooltipEl.style.width = tooltipEl.offsetWidth + 'px';
+          tooltipEl.style.whiteSpace = 'nowrap';
+        }
+      });
+    }
   }
 };

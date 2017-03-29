@@ -730,6 +730,7 @@
 | label-width | 表单域标签的宽度，所有的 form-item 都会继承 form 组件的 labelWidth 的值 | string | — | — |
 | label-suffix | 表单域标签的后缀 | string | — | — |
 | show-message  | 是否显示校验错误信息 | boolean | — | true |
+| un-submit  | 阻止表单浏览器默认提交事件 | boolean | — | false |
 
 ### Form Methods
 

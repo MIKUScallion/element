@@ -1,5 +1,5 @@
 <template>
-  <form class="el-form" :class="[
+  <form @submit.native="unSubmit ? preventDefault : null" class="el-form" :class="[
     labelPosition ? 'el-form--label-' + labelPosition : '',
     { 'el-form--inline': inline }
   ]">
@@ -25,7 +25,8 @@
       showMessage: {
         type: Boolean,
         default: true
-      }
+      },
+      unSubmit: Boolean
     },
     watch: {
       rules() {
@@ -75,6 +76,10 @@
         if (!field) { throw new Error('must call validateField with valid prop string!'); }
 
         field.validate('', cb);
+      },
+      preventDefault(event) {
+        event.preventDefault();
+        return false;
       }
     }
   };

@@ -72,6 +72,7 @@ help:
 	@echo "   \033[35mmake deploy-sunfish-212\033[0m\t\033[0m\t---  部署 sunfish 到内网 212"
 	@echo "   \033[35mmake deploy-bonyfish-common-module\033[0m\t---  部署 bonyfish 到上级目录 common-module 中"
 	@echo "   \033[35mmake deploy-sunfish-common-module\033[0m\t---  部署 sunfish 到上级目录 common-module 中"
+	@echo "   \033[35mmake deploy-bonyfish-brokerage-web-common-module\033[0m\t---  部署 sunfish 到上级目录 brokerage-web 的 common-module 中"
 	@echo "   \033[35mmake pub\033[0m\t\033[0m\t\033[0m\t\033[0m\t---  发布到 npm 上"
 	@echo "   \033[35mmake pub-all\033[0m\t\033[0m\t\033[0m\t\033[0m\t---  发布各组件到 npm 上"
 	@echo "   \033[35mmake new-lang <lang>\033[0m\t\033[0m\t\033[0m\t---  为网站添加新语言. 例如 'make new-lang fr'"

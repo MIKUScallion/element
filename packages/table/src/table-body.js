@@ -114,8 +114,8 @@ export default {
     },
     'store.states.data': {
       immediate: true,
-      handler() {
-        this.initTooltip();
+      handler(newVal, oldVal) {
+        (!oldVal || (newVal.length !== oldVal.length)) && this.initTooltip();
       }
     }
   },
@@ -257,7 +257,6 @@ export default {
     initTooltip() {
       this.$nextTick(function() {
         const refKeys = Object.keys(this.$refs).map(key => key.indexOf('tooltip') !== -1 && key);
-        console.log(refKeys);
         for (let key of refKeys) {
           const tooltipEl = this.$refs[key].$el;
           tooltipEl.style.width = tooltipEl.offsetWidth + 'px';

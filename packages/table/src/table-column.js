@@ -4,6 +4,7 @@ import objectAssign from 'element-ui/src/utils/merge';
 import { getValueByPath } from './util';
 
 let columnIdSeed = 1;
+let counter = 0;
 
 const defaults = {
   default: {
@@ -285,14 +286,18 @@ export default {
         renderCell = DEFAULT_RENDER_CELL;
       }
 
+      counter++;
       return _self.showOverflowTooltip || _self.showTooltipWhenOverflow
-        ? <el-tooltip
-            effect={ this.effect }
-            placement="top"
-            disabled={ this.tooltipDisabled }>
-            <div class="cell">{ renderCell(h, data) }</div>
-            <span slot="content">{ renderCell(h, data) }</span>
-          </el-tooltip>
+        ? <div>
+           <el-tooltip
+             ref={ column.id + '_' + counter + '_tooltip'}
+             effect={ this.effect }
+             placement="top"
+             disabled={ this.tooltipDisabled }>
+             <div class="cell">{ renderCell(h, data) }</div>
+             <span slot="content">{ renderCell(h, data) }</span>
+           </el-tooltip>
+          </div>
         : <div class="cell">{ renderCell(h, data) }</div>;
     };
   },

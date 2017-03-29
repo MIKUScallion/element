@@ -45,10 +45,6 @@
 
     .el-tooltip__rel {
       display: block;
-
-      .cell {
-         white-space: nowrap;
-      }
     }
 
     @e empty-block {
@@ -376,7 +372,6 @@
       box-sizing: border-box;
       overflow: hidden;
       text-overflow: ellipsis;
-      white-space: normal;
       word-break: break-all;
       line-height: 24px;
       padding-left: 18px;

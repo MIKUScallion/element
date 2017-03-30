@@ -16,7 +16,7 @@
     }
 
     @e wrap {
-      overflow: scroll;
+      overflow: auto;
 
       @m hidden-default {
         &::-webkit-scrollbar {

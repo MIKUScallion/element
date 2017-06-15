@@ -125,8 +125,13 @@
         handler(value) {
           let newVal = Number(value);
           if (isNaN(newVal)) return;
-          if (newVal >= this.max) newVal = this.max;
-          if (newVal <= this.min) newVal = this.min;
+          if (newVal >= this.max) {
+            newVal = this.max;
+          } else if (newVal <= this.min) {
+            newVal = this.min;
+          } else {
+            newVal = value;
+          }
           this.currentValue = newVal;
           this.$emit('input', newVal);
         }

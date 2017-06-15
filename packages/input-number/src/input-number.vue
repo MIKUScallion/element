@@ -197,7 +197,7 @@
         this.setCurrentValue(newVal);
       },
       handleBlur() {
-        this.$refs.input.setCurrentValue(this.currentValue);
+        this.$refs.input.setCurrentValue(Number(this.currentValue));
       },
       setCurrentValue(newVal) {
         const oldVal = this.currentValue;
@@ -211,7 +211,7 @@
       handleInput(value) {
         const newVal = Number(value);
         if (!isNaN(newVal)) {
-          this.setCurrentValue(newVal);
+          this.setCurrentValue(value);
         }
       }
     }
